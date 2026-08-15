@@ -1,0 +1,6 @@
+@FinSight.Simulacoes.API_HostAddress = http://localhost:5100
+
+GET {{FinSight.Simulacoes.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

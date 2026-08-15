@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../../../../../../OneDrive/Área de Trabalho/FinSight/GoalServices/FinSight.Metas.API/FinSight.Metas.API.csproj" />
+  <Project Path="../../../../../../OneDrive/Área de Trabalho/FinSight/GoalServices/FinSight.Metas.Application/FinSight.Metas.Application.csproj" Id="c03469f9-b9a9-49e0-9cd6-e91f18d7052a" />
+  <Project Path="../../../../../../OneDrive/Área de Trabalho/FinSight/GoalServices/FinSight.Metas.Domain/FinSight.Metas.Domain.csproj" Id="ffa8e382-fe95-4223-a0b3-f1a76be5aba2" />
+  <Project Path="../../../../../../OneDrive/Área de Trabalho/FinSight/GoalServices/FinSight.Metas.Infrastructure/FinSight.Metas.Infrastructure.csproj" Id="edac9422-6f47-495f-a97c-a2be5c5888bc" />
+</Solution>

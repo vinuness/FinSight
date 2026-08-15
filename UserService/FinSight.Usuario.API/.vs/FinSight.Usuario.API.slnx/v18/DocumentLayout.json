@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vinicius\\OneDrive\\\u00C1rea de Trabalho\\FinSight\\UserService\\FinSight.Usuario.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D434083B-CE2C-41C1-9838-48B907FC16DF}|..\\FinSight.Usuario.Infrastructure\\FinSight.Usuario.Infrastructure.csproj|c:\\users\\vinicius\\onedrive\\\u00E1rea de trabalho\\finsight\\userservice\\finsight.usuario.infrastructure\\utilidades\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D434083B-CE2C-41C1-9838-48B907FC16DF}|..\\FinSight.Usuario.Infrastructure\\FinSight.Usuario.Infrastructure.csproj|c:\\users\\vinicius\\onedrive\\\u00E1rea de trabalho\\finsight\\userservice\\finsight.usuario.infrastructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\OneDrive\\\u00C1rea de Trabalho\\FinSight\\UserService\\FinSight.Usuario.Infrastructure\\Utilidades\\Constants.cs",
+              "RelativeDocumentMoniker": "..\\FinSight.Usuario.Infrastructure\\Utilidades\\Constants.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\OneDrive\\\u00C1rea de Trabalho\\FinSight\\UserService\\FinSight.Usuario.Infrastructure\\Utilidades\\Constants.cs",
+              "RelativeToolTip": "..\\FinSight.Usuario.Infrastructure\\Utilidades\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T08:13:26.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vinicius\\OneDrive\\\u00C1rea de Trabalho\\FinSight\\UserService\\FinSight.Usuario.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "..\\FinSight.Usuario.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\Vinicius\\OneDrive\\\u00C1rea de Trabalho\\FinSight\\UserService\\FinSight.Usuario.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "..\\FinSight.Usuario.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T07:38:19.133Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

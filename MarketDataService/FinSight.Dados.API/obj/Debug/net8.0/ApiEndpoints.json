@@ -1,0 +1,122 @@
+[
+  {
+    "ContainingType": "FinSight.Dados.API.Controllers.APIDataController",
+    "Method": "GetBTCBRL",
+    "RelativePath": "api/APIData/get/data/BTCBRL",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Dados.API.DTOs.APIResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Dados.API.Controllers.APIDataController",
+    "Method": "GetCDIData",
+    "RelativePath": "api/APIData/get/data/CDI",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Dados.API.DTOs.BCBDataModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Dados.API.Controllers.APIDataController",
+    "Method": "GetEURBRL",
+    "RelativePath": "api/APIData/get/data/EURBRL",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Dados.API.DTOs.APIResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Dados.API.Controllers.APIDataController",
+    "Method": "GetIPCAData",
+    "RelativePath": "api/APIData/get/data/IPCA",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Dados.API.DTOs.BCBDataModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Dados.API.Controllers.APIDataController",
+    "Method": "GetSelicData",
+    "RelativePath": "api/APIData/get/data/Selic",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Dados.API.DTOs.BCBDataModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Dados.API.Controllers.APIDataController",
+    "Method": "GetUSDBRL",
+    "RelativePath": "api/APIData/get/data/USDBRL",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Dados.API.DTOs.APIResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

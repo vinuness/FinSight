@@ -1,0 +1,222 @@
+[
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.EnderecoController",
+    "Method": "AddAdress",
+    "RelativePath": "api/Endereco/add/adress/{email}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "endereco",
+        "Type": "FinSight.Usuario.Domain.Entities.EnderecoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.EnderecoController",
+    "Method": "RemoveAdress",
+    "RelativePath": "api/Endereco/delete/{email}/adress/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.EnderecoController",
+    "Method": "SetAdress",
+    "RelativePath": "api/Endereco/set/{email}/adress/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "FinSight.Usuario.Domain.Entities.EnderecoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Usuario/delete/user/{email}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "FindByEmail",
+    "RelativePath": "api/Usuario/find/user/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Usuario.Domain.Entities.UsuarioModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "api/Usuario/log/in/user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "FinSight.Usuario.Domain.Entities.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FinSight.Usuario.Domain.Entities.LoginResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "Register",
+    "RelativePath": "api/Usuario/register/user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "register",
+        "Type": "FinSight.Usuario.Domain.Entities.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "SetEmail",
+    "RelativePath": "api/Usuario/set/email/{emailAtual}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "emailAtual",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "emailAtualizado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "SetName",
+    "RelativePath": "api/Usuario/set/name/{email}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinSight.Usuario.API.Controllers.UsuarioController",
+    "Method": "SetPassword",
+    "RelativePath": "api/Usuario/set/pass/{email}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "confirmPas",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
