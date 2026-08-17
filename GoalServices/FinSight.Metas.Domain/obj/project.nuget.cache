@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ChRmKsixsQo=",
+  "dgSpecHash": "VxNc8ijkZ/5adAgC+/Vdab+ApZkt4NlAbQmvssi+DC0tIoKDjSoz3PCu8j/7K2B90gqFXdugoNGZLOeXefsE3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinicius\\OneDrive\\Área de Trabalho\\FinSight\\GoalServices\\FinSight.Metas.Domain\\FinSight.Metas.Domain.csproj",
+  "projectFilePath": "/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/FinSight.Metas.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

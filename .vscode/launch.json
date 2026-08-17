@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "UserService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-user",
+            "program": "${workspaceFolder}/UserService/FinSight.Usuario.API/bin/Debug/net8.0/FinSight.Usuario.API.dll",
+            "cwd": "${workspaceFolder}/UserService/FinSight.Usuario.API",
+            "stopAtEntry": false
+        },
+        {
+            "name": "GoalsService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-goals",
+            "program": "${workspaceFolder}/GoalServices/FinSight.Metas.API/bin/Debug/net8.0/FinSight.Metas.API.dll",
+            "cwd": "${workspaceFolder}/GoalServices/FinSight.Metas.API",
+            "stopAtEntry": false
+        },
+        {
+            "name": "CalculationService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-calculation",
+            "program": "${workspaceFolder}/CalculationService/FinSight.Calculos.API/bin/Debug/net8.0/FinSight.Calculos.API.dll",
+            "cwd": "${workspaceFolder}/CalculationService/FinSight.Calculos.API",
+            "stopAtEntry": false
+        },
+        {
+            "name": "SimulationService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-simulation",
+            "program": "${workspaceFolder}/SimulationService/FinSight.Simulacoes.API/bin/Debug/net8.0/FinSight.Simulacoes.API.dll",
+            "cwd": "${workspaceFolder}/SimulationService/FinSight.Simulacoes.API",
+            "stopAtEntry": false
+        },
+        {
+            "name": "MarketDataService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-marketdata",
+            "program": "${workspaceFolder}/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/FinSight.Dados.API.dll",
+            "cwd": "${workspaceFolder}/MarketDataService/FinSight.Dados.API",
+            "stopAtEntry": false
+        }
+    ],
+    "compounds": [
+        {
+            "name": "FinSight - Start All Services",
+            "configurations": [
+                "UserService",
+                "GoalsService",
+                "CalculationService",
+                "SimulationService",
+                "MarketDataService"
+            ],
+            "stopAll": true
+        }
+    ]
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DWph67nl1cE=",
+  "dgSpecHash": "5CzZulfiPMNXykcNBG9vqjuJh3tkB/v0mrHXCv81vwNvYALDXMcJQz2UPXJNMx/1O2GbHEfTf68rydd5r/bfFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinicius\\OneDrive\\Área de Trabalho\\FinSight\\UserService\\FinSight.Usuario.Domain\\FinSight.Usuario.Domain.csproj",
+  "projectFilePath": "/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/FinSight.Usuario.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,37 +1,34 @@
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\appsettings.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\FinSight.Dados.API.staticwebassets.endpoints.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\FinSight.Dados.API.exe
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\FinSight.Dados.API.deps.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\FinSight.Dados.API.runtimeconfig.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\FinSight.Dados.API.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\FinSight.Dados.API.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.csproj.AssemblyReference.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.AssemblyInfoInputs.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.AssemblyInfo.cs
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.csproj.CoreCompileInputs.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\scopedcss\bundle\FinSight.Dados.API.styles.css
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.3FC435E1.Up2Date
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\refint\FinSight.Dados.API.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\FinSight.Dados.API.genruntimeconfig.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\MarketDataService\FinSight.Dados.API\obj\Debug\net8.0\ref\FinSight.Dados.API.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/appsettings.Development.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/appsettings.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/FinSight.Dados.API
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/FinSight.Dados.API.deps.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/FinSight.Dados.API.runtimeconfig.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/FinSight.Dados.API.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/FinSight.Dados.API.pdb
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.csproj.AssemblyReference.cache
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.GeneratedMSBuildEditorConfig.editorconfig
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.AssemblyInfoInputs.cache
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.AssemblyInfo.cs
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.csproj.CoreCompileInputs.cache
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.MvcApplicationPartsAssemblyInfo.cs
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.MvcApplicationPartsAssemblyInfo.cache
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.sourcelink.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets.build.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets.development.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets/msbuild.FinSight.Dados.API.Microsoft.AspNetCore.StaticWebAssets.props
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets/msbuild.build.FinSight.Dados.API.props
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.FinSight.Dados.API.props
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.FinSight.Dados.API.props
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/staticwebassets.pack.json
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/scopedcss/bundle/FinSight.Dados.API.styles.css
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.csproj.CopyComplete
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/refint/FinSight.Dados.API.dll
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.pdb
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/FinSight.Dados.API.genruntimeconfig.cache
+/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/obj/Debug/net8.0/ref/FinSight.Dados.API.dll

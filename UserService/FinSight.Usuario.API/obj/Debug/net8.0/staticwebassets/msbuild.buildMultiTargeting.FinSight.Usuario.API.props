@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/FinSight.Usuario.API.props" />
+</Project>

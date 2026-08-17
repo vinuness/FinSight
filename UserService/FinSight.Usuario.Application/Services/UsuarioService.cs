@@ -19,6 +19,11 @@ namespace FinSight.Usuario.Application.Services
             await _repo.Register(register);
         }
 
+        public async Task<UsuarioModel> FindById(Guid id)
+        {
+            return await _repo.FindById(id);
+        }
+
         public async Task<UsuarioModel> FindByEmail(string email)
         {
             return await _repo.FindByEmail(email);
@@ -64,6 +69,5 @@ namespace FinSight.Usuario.Application.Services
 
             return response;
         }
-
     }
 }

@@ -1,0 +1,12 @@
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/bin/Debug/net8.0/FinSight.Metas.Domain.deps.json
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/bin/Debug/net8.0/FinSight.Metas.Domain.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/bin/Debug/net8.0/FinSight.Metas.Domain.pdb
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.AssemblyInfoInputs.cache
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.AssemblyInfo.cs
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.csproj.CoreCompileInputs.cache
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.sourcelink.json
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/refint/FinSight.Metas.Domain.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/FinSight.Metas.Domain.pdb
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Domain/obj/Debug/net8.0/ref/FinSight.Metas.Domain.dll

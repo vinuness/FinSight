@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"92VyliJfXO7a8/TGOfrzhDEW5RMasMlmE7t7YANuS7U=","Source":"FinSight.Dados.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "gPW2sMM1AZ6Ovz8EKw/4HBc6oZZwXZKoEGrpcgeyTdg=",
+  "Source": "FinSight.Dados.API",
+  "BasePath": "_content/FinSight.Dados.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

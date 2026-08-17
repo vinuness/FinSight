@@ -36,6 +36,22 @@ namespace FinSight.Usuario.Infrastructure.Repositories
             }
         }
 
+        public async Task<UsuarioModel> FindById(Guid id)
+        {
+            try
+            {
+                var usuario = await _con.Usuarios
+                    .Include(u => u.Enderecos)
+                    .FirstOrDefaultAsync(u => u.Id == id);
+                
+                return usuario;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public async Task<UsuarioModel> FindByEmail(string email)
         {
             var usuario = await _con.Usuarios

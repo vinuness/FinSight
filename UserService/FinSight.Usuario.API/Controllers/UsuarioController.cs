@@ -35,8 +35,14 @@ namespace FinSight.Usuario.API.Controllers
 
         }
 
+        [HttpGet("find/user/{id}")]
+        [Authorize(Roles = "Usuario,Admin")]
+        public async Task<ActionResult<UsuarioModel>> FindById(Guid id)
+        {
+            return await _service.FindById(id);
+        }
 
-        [HttpGet("find/user/{email}")]
+        [HttpGet("find/user/email/{email}")]
         [Authorize(Roles = "Usuario,Admin")]
         public async Task<ActionResult<UsuarioModel>> FindByEmail(string email)
         {

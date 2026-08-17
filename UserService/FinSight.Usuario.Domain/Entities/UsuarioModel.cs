@@ -4,7 +4,7 @@ namespace FinSight.Usuario.Domain.Entities
 {
     public class UsuarioModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string? Nome { get; set; }
         public string? Email { get; set; }
         public string? Senha { get; set; }

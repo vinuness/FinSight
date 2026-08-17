@@ -8,9 +8,9 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
     {
         private readonly HttpClient _client;
 
-        public APIData(IHttpClientFactory factory)
+        public APIData(HttpClient client)
         {
-            _client = factory.CreateClient();
+            _client = client;
         }
 
         public async Task<APIResponseDTO> GetUSDBRL()

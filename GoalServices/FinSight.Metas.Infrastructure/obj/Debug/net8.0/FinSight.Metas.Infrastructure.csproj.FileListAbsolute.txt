@@ -1,0 +1,16 @@
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.deps.json
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.pdb
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Domain.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Domain.pdb
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.csproj.AssemblyReference.cache
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.AssemblyInfoInputs.cache
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.AssemblyInfo.cs
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.csproj.CoreCompileInputs.cache
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.sourcelink.json
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.csproj.CopyComplete
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/refint/FinSight.Metas.Infrastructure.dll
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.pdb
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/ref/FinSight.Metas.Infrastructure.dll

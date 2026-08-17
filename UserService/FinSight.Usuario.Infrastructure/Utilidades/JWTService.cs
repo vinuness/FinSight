@@ -10,10 +10,14 @@ namespace FinSight.Usuario.Infrastructure.Utilidades
     public class JWTService
     {
         private readonly string _key;
+        private readonly string _issuer;
+        private readonly string _audience;
 
         public JWTService(IConfiguration configuration)
         {
             _key = configuration["jwt:key"] ?? "";
+            _issuer = configuration["jwt:issuer"] ?? "";
+            _audience = configuration["jwt:audience"] ?? "";
         }
 
         public string GenerateToken(UsuarioModel usuario)
@@ -30,7 +34,9 @@ namespace FinSight.Usuario.Infrastructure.Utilidades
                     new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature),
+                Issuer = _issuer,
+                Audience = _audience
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);

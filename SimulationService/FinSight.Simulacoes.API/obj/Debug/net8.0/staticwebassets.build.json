@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3h6NWAKfbz1ekfoYHC542DPhYUDJAsiRtTHG9MouaeA=",
+  "Source": "FinSight.Simulacoes.API",
+  "BasePath": "_content/FinSight.Simulacoes.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

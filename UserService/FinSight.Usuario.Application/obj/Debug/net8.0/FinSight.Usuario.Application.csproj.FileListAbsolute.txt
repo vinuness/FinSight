@@ -1,38 +1,39 @@
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Application.deps.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Application.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Application.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Domain.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Infrastructure.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Domain.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\FinSight.Usuario.Infrastructure.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.csproj.AssemblyReference.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.AssemblyInfoInputs.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.AssemblyInfo.cs
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.csproj.CoreCompileInputs.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.BF728558.Up2Date
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\refint\FinSight.Usuario.Application.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\FinSight.Usuario.Application.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\obj\Debug\net8.0\ref\FinSight.Usuario.Application.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\LatoFont\OFL.txt
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Application\bin\Debug\net8.0\appsettings.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/appsettings.Development.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/appsettings.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Black.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-BlackItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Bold.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-BoldItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-ExtraBold.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-ExtraBoldItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-ExtraLight.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-ExtraLightItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Italic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Light.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-LightItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Medium.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-MediumItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Regular.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-SemiBold.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-SemiBoldItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-Thin.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/Lato-ThinItalic.ttf
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/LatoFont/OFL.txt
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Application.deps.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Application.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Application.pdb
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Domain.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Infrastructure.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Domain.pdb
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/bin/Debug/net8.0/FinSight.Usuario.Infrastructure.pdb
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.csproj.AssemblyReference.cache
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.AssemblyInfoInputs.cache
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.AssemblyInfo.cs
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.csproj.CoreCompileInputs.cache
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.sourcelink.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.csproj.CopyComplete
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/refint/FinSight.Usuario.Application.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/FinSight.Usuario.Application.pdb
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Application/obj/Debug/net8.0/ref/FinSight.Usuario.Application.dll

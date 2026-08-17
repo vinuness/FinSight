@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"fZAvlz/8dgdCKiSynzDpEG/2PCdWvxxIGCr7H+cBMeM=","Source":"FinSight.Usuario.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "Zsh0j5q8cmyT27BRO/9J/Z2GhsSPuO0Cy3/agsCO8Zg=",
+  "Source": "FinSight.Usuario.API",
+  "BasePath": "_content/FinSight.Usuario.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

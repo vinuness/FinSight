@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VKGzhUOxa5dHGgryqFr6pmdCTcqHvbY7f14YLv1MtXs=",
+  "Source": "FinSight.Metas.API",
+  "BasePath": "_content/FinSight.Metas.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

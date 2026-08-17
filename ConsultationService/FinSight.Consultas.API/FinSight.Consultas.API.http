@@ -1,6 +1,0 @@
-@FinSight.Consultas.API_HostAddress = http://localhost:5270
-
-GET {{FinSight.Consultas.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

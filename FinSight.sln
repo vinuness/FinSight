@@ -1,0 +1,104 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CalculationService", "CalculationService", "{CF5D3F24-6308-40FD-BF68-F2C3360DAD3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Calculos.API", "CalculationService\FinSight.Calculos.API\FinSight.Calculos.API.csproj", "{F48678E2-D5C6-42C3-AD56-E55ED2332DBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "UserService", "{95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Usuario.API", "UserService\FinSight.Usuario.API\FinSight.Usuario.API.csproj", "{5AB072CC-C854-48E8-BEFD-0F58C29227C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Usuario.Application", "UserService\FinSight.Usuario.Application\FinSight.Usuario.Application.csproj", "{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Usuario.Domain", "UserService\FinSight.Usuario.Domain\FinSight.Usuario.Domain.csproj", "{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Usuario.Infrastructure", "UserService\FinSight.Usuario.Infrastructure\FinSight.Usuario.Infrastructure.csproj", "{9269D062-12AC-456C-BD3D-EF1AACA7AF71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimulationService", "SimulationService", "{C0984865-15A2-479B-90FC-D5AE3FAC5ABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Simulacoes.API", "SimulationService\FinSight.Simulacoes.API\FinSight.Simulacoes.API.csproj", "{06190CFD-8E51-4B3F-8723-8923E5394621}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MarketDataService", "MarketDataService", "{47A2DD06-63F9-473C-9849-F9072ACFB4DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Dados.API", "MarketDataService\FinSight.Dados.API\FinSight.Dados.API.csproj", "{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GoalServices", "GoalServices", "{C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Metas.API", "GoalServices\FinSight.Metas.API\FinSight.Metas.API.csproj", "{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Metas.Application", "GoalServices\FinSight.Metas.Application\FinSight.Metas.Application.csproj", "{018B78A7-5BAB-4D31-977E-1A93B0F2850F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Metas.Infrastructure", "GoalServices\FinSight.Metas.Infrastructure\FinSight.Metas.Infrastructure.csproj", "{8E0A8E93-2E24-4AD6-9F52-ABFEB37E6FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Metas.Domain", "GoalServices\FinSight.Metas.Domain\FinSight.Metas.Domain.csproj", "{5082C119-AECC-4ACB-AE17-43306DEAA393}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB072CC-C854-48E8-BEFD-0F58C29227C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB072CC-C854-48E8-BEFD-0F58C29227C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB072CC-C854-48E8-BEFD-0F58C29227C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB072CC-C854-48E8-BEFD-0F58C29227C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06190CFD-8E51-4B3F-8723-8923E5394621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06190CFD-8E51-4B3F-8723-8923E5394621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06190CFD-8E51-4B3F-8723-8923E5394621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06190CFD-8E51-4B3F-8723-8923E5394621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018B78A7-5BAB-4D31-977E-1A93B0F2850F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018B78A7-5BAB-4D31-977E-1A93B0F2850F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018B78A7-5BAB-4D31-977E-1A93B0F2850F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018B78A7-5BAB-4D31-977E-1A93B0F2850F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0A8E93-2E24-4AD6-9F52-ABFEB37E6FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0A8E93-2E24-4AD6-9F52-ABFEB37E6FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0A8E93-2E24-4AD6-9F52-ABFEB37E6FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0A8E93-2E24-4AD6-9F52-ABFEB37E6FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD} = {CF5D3F24-6308-40FD-BF68-F2C3360DAD3C}
+		{5AB072CC-C854-48E8-BEFD-0F58C29227C9} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
+		{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
+		{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
+		{9269D062-12AC-456C-BD3D-EF1AACA7AF71} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
+		{06190CFD-8E51-4B3F-8723-8923E5394621} = {C0984865-15A2-479B-90FC-D5AE3FAC5ABA}
+		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA} = {47A2DD06-63F9-473C-9849-F9072ACFB4DB}
+		{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8} = {C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}
+		{018B78A7-5BAB-4D31-977E-1A93B0F2850F} = {C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}
+		{8E0A8E93-2E24-4AD6-9F52-ABFEB37E6FCC} = {C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}
+		{5082C119-AECC-4ACB-AE17-43306DEAA393} = {C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}
+	EndGlobalSection
+EndGlobal

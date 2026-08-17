@@ -14,7 +14,7 @@ namespace FinSight.Usuario.Infrastructure.Data
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            var ConfigPath = Environment.ExpandEnvironmentVariables(config["connection:ConfigPath"] ?? "");
+            var ConfigPath = config["connection:ConfigPath"] ?? "";
 
             var constants = new Constants();
             constants.ConfigPath = ConfigPath;

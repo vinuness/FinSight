@@ -18,14 +18,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Configuration.SetBasePath(
-    Path.Combine(Directory.GetCurrentDirectory(),
-    "..",
-    "FinSight.Usuario.Infrastructure")
-).AddJsonFile("appsettings.json");
-
 var key = Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"] ?? "");
-var configPath = Environment.ExpandEnvironmentVariables(builder.Configuration["connection:ConfigPath"] ?? "");
+var configPath = builder.Configuration["connection:ConfigPath"] ?? "";
 
 builder.Services.AddAuthentication((options) =>
 {

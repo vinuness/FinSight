@@ -1,11 +1,12 @@
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\FinSight.Usuario.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\FinSight.Usuario.Domain.AssemblyInfoInputs.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\FinSight.Usuario.Domain.AssemblyInfo.cs
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\FinSight.Usuario.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\bin\Debug\net8.0\FinSight.Usuario.Domain.deps.json
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\bin\Debug\net8.0\FinSight.Usuario.Domain.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\bin\Debug\net8.0\FinSight.Usuario.Domain.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\FinSight.Usuario.Domain.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\refint\FinSight.Usuario.Domain.dll
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\FinSight.Usuario.Domain.pdb
-C:\Users\Vinicius\OneDrive\Área de Trabalho\FinSight\UserService\FinSight.Usuario.Domain\obj\Debug\net8.0\ref\FinSight.Usuario.Domain.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/bin/Debug/net8.0/FinSight.Usuario.Domain.deps.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/bin/Debug/net8.0/FinSight.Usuario.Domain.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/bin/Debug/net8.0/FinSight.Usuario.Domain.pdb
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.AssemblyInfoInputs.cache
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.AssemblyInfo.cs
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.csproj.CoreCompileInputs.cache
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.sourcelink.json
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/refint/FinSight.Usuario.Domain.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/FinSight.Usuario.Domain.pdb
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.Domain/obj/Debug/net8.0/ref/FinSight.Usuario.Domain.dll

@@ -5,6 +5,7 @@ namespace FinSight.Usuario.Domain.Interfaces.IServices
     public interface IUsuarioService
     {
         public Task Register(RegisterModel register);
+        public Task<UsuarioModel> FindById(Guid id);
         public Task<UsuarioModel> FindByEmail(string email);
         public Task SetName(string email, string name);
         public Task SetEmail(string emailAtual, string emailAtualizado);

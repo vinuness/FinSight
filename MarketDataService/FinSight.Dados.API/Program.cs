@@ -1,6 +1,8 @@
 using FinSight.Dados.API.Controllers;
 using FinSight.Dados.API.Service.AwesomeAPIService;
 using FinSight.Dados.API.Service.Interface;
+using System.Net;
+using System.Net.Sockets;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,33 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IAPIData, APIData>();
-builder.Services.AddHttpClient();
+
+builder.Services.AddHttpClient<IAPIData, APIData>()
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new SocketsHttpHandler
+        {
+            ConnectCallback = async (context, cancellationToken) =>
+            {
+                var addresses = await Dns.GetHostAddressesAsync(
+                    context.DnsEndPoint.Host,
+                    AddressFamily.InterNetwork,
+                    cancellationToken
+                );
+
+                var socket = new Socket(
+                    AddressFamily.InterNetwork,
+                    SocketType.Stream,
+                    ProtocolType.Tcp
+                );
+
+                await socket.ConnectAsync(
+                    new IPEndPoint(addresses[0], context.DnsEndPoint.Port),
+                    cancellationToken
+                );
+
+                return new NetworkStream(socket, ownsSocket: true);
+            }
+        });
 
 var app = builder.Build();
 

@@ -19,31 +19,66 @@ namespace FinSight.Metas.Infrastructure.Repositories
             _con = con;
         }
 
-        public async Task<List<Meta>> FindAllGoals(string email)
-        {
+        public async Task<List<Meta>> FindAllGoals(Guid id)
+        {   
             return await _con
-                .Metas.Where(m => m.Email == email)
+                .Metas.Where(m => m.UsuarioId == id)
                 .ToListAsync();
         }
 
-        public Task<Meta> FindGoalById(Guid id)
+        public async Task<Meta> FindGoalById(Guid id)
         {
-            throw new NotImplementedException();
+            return await _con.Metas
+                .FirstOrDefaultAsync(m => m.Id == id);
         }
 
-        public Task SaveGoal(MetaDTO dto)
+        public async Task SaveGoal(MetaDTO dto)
         {
-            throw new NotImplementedException();
+            var Meta = new Meta{
+                UsuarioId = dto.UsuarioId,
+                Name = dto.Name ?? "Nova Meta",
+                Description = dto.Description,
+                ValorAlcancado = dto.ValorAlcancado,
+                ValorDesejado = dto.ValorDesejado
+            }; 
+
+            await _con.Metas.AddAsync(Meta);
+            await _con.SaveChangesAsync();
         }
 
-        public Task UpdateGoal(MetaUpdate update)
+        public async Task UpdateGoal(Guid id, MetaUpdate update)
         {
-            throw new NotImplementedException();
+            var meta = await _con.Metas
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if(meta != null)
+            {
+                meta.Description = update.Description;
+                meta.Name = update.Name ?? meta.Name;
+                if(meta.ValorAlcancado != null)
+                {
+                    meta.ValorAlcancado = update.ValorAlcancado;
+                }
+                if(meta.ValorDesejado != null)
+                {
+                    meta.ValorDesejado = update.ValorDesejado;
+                }
+            }
+
+            await _con.SaveChangesAsync();
         }
 
-        public Task DeleteGoal(Guid id)
+        public async Task DeleteGoal(Guid id)
         {
-            throw new NotImplementedException();
+            var meta = await _con.Metas
+                .FirstOrDefaultAsync(m => m.Id == id);
+            
+            if(meta != null)
+            {
+                _con.Metas.Remove(meta);
+            }
+
+            await _con.SaveChangesAsync();
         }
     }
 }
