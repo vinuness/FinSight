@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using FinSight.Calculos.API.Entities.EmergencyReserve;
 using FinSight.Calculos.API.Entities.GoalCalculation;
 using FinSight.Calculos.API.Entities.Inflation;
@@ -23,28 +19,28 @@ namespace FinSight.Calculos.API.Controllers
         }
 
         [HttpGet("calcular/meta")]
-        public async Task<ActionResult<MetaResponse>> CalcularMeta(MetaRequest meta)
+        public async Task<ActionResult<MetaResponse>> CalcularMeta([FromBody] MetaRequest meta)
         {
             MetaResponse response = await _calc.CalcularMeta(meta);
             return Ok(response);
         }
 
         [HttpGet("calcular/prazo")]
-        public async Task<ActionResult<PrazoResponse>> CalcularPrazo(PrazoRequest prazo)
+        public async Task<ActionResult<PrazoResponse>> CalcularPrazo([FromBody] PrazoRequest prazo)
         {
             PrazoResponse response = await _calc.CalcularPrazo(prazo);
             return Ok(response);
         }
         
         [HttpGet("calcular/inflacao")]
-        public async Task<ActionResult<InflationResponse>> CalcularInflação(InflationRequest inflacao)
+        public async Task<ActionResult<InflationResponse>> CalcularInflação([FromBody] InflationRequest inflacao)
         {
             InflationResponse response = await _calc.CalcularInflação(inflacao);
             return Ok(response);
         }
 
         [HttpGet("calcular/reserva")]
-        public async Task<ActionResult<ReservaResponse>> CalcularReservaAsync(ReservaRequest reserva)
+        public async Task<ActionResult<ReservaResponse>> CalcularReservaAsync([FromBody] ReservaRequest reserva)
         {
             ReservaResponse response = _calc.CalcularReserva(reserva);
             return Ok(response);

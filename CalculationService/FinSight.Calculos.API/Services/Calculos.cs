@@ -55,10 +55,8 @@ namespace FinSight.Calculos.API.Services
 
             if (response == null) throw new Exception("Não foi possível obter o IPCA");
 
-            inflacao.IPCA = (decimal)response.Valor;
-
             double anos = inflacao.PrazoEmMeses / 12.0;
-            double taxa = (double)inflacao.IPCA / 100;
+            double taxa = response.Valor / 100;
             decimal valorFuturo = inflacao.Valor * (decimal)Math.Pow(1 + taxa, anos);
 
             return new InflationResponse

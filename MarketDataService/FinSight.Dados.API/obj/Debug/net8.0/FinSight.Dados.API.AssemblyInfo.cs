@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinSight.Dados.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d5b414da94fa935a84ece390eb8b5c8439b4671")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+164a03eb5dcb65ca3635bfa8b582ac5c7402e0be")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinSight.Dados.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinSight.Dados.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
