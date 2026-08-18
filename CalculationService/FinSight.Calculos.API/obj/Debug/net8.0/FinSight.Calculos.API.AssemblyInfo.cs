@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinSight.Calculos.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26305568880909a45947aca0bb4f144847dfee40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d5b414da94fa935a84ece390eb8b5c8439b4671")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinSight.Calculos.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinSight.Calculos.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

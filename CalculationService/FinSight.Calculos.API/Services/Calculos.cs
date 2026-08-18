@@ -24,31 +24,25 @@ namespace FinSight.Calculos.API.Services
 
         public JurosCompostoResponse CalculoJurosComposto(JurosCompostoRequest juros)
         {
-            //taxaMensal = (1 + taxa/100^periodo) - 1
             double taxaMensal = Math.Pow(1 + ((double)juros.TaxaAnual / 100), 1.0 / 12) - 1;
-
-            //valorInicialComJuros = valorInicial * (1 + taxa)^prazo
-            double valorInicialComJuros = (double)juros.ValorInicial * Math.Pow(1 + taxaMensal,juros.PrazoEmMeses);
-
+            double valorInicialComJuros = (double)juros.ValorInicial * Math.Pow(1 + taxaMensal, juros.PrazoEmMeses);
             double valorAportes;
 
             if (taxaMensal > 0)
             {
-                valorAportes = (double)juros.AporteMensal * ((Math.Pow(1 + taxaMensal,juros.PrazoEmMeses) - 1)/ taxaMensal);
+                valorAportes = (double)juros.AporteMensal * ((Math.Pow(1 + taxaMensal, juros.PrazoEmMeses) - 1) / taxaMensal);
             }
             else
             {
                 valorAportes = (double)juros.AporteMensal * juros.PrazoEmMeses;
             }
-
-            decimal patrimonioFinal = (decimal)(valorInicialComJuros + valorAportes);
-            decimal TotalInvestido = juros.ValorInicial + (juros.AporteMensal * juros.PrazoEmMeses);
-            decimal rendimentos = patrimonioFinal - TotalInvestido;
-
+            decimal patrimonioFinal = Math.Round((decimal)(valorInicialComJuros + valorAportes), 2);
+            decimal totalInvestido = Math.Round(juros.ValorInicial + (juros.AporteMensal * juros.PrazoEmMeses), 2);
+            decimal rendimentos = Math.Round(patrimonioFinal - totalInvestido, 2);
 
             return new JurosCompostoResponse
             {
-                TotalInvestido = TotalInvestido,
+                TotalInvestido = totalInvestido,
                 PatrimonioFinal = patrimonioFinal,
                 Rendimentos = rendimentos
             };
@@ -79,15 +73,12 @@ namespace FinSight.Calculos.API.Services
         {
 
             APIIPCAResponse selicRes = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/Selic");
+            if(selicRes == null) throw new Exception("Resposta da Selic nula");
             decimal SELIC = (decimal)selicRes.Valor;
 
             APIIPCAResponse cdiRes = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/CDI");
+            if(cdiRes == null) throw new Exception("Resposta do CDI nulo");
             decimal CDI = (decimal)cdiRes.Valor;
-
-            if (selicRes == null || cdiRes == null)
-            {
-                throw new InvalidOperationException("Não foi possível obter SELIC ou CDI.");
-            }
 
             var jurosSelic = new JurosCompostoRequest
             {
@@ -112,7 +103,7 @@ namespace FinSight.Calculos.API.Services
             return new MetaResponse
             {
                 ValorMeta = meta.ValorMeta,
-                SELIC =
+                SELIC = new CenarioMetaResponse
                 {
                     Nome = "SELIC",
                     TaxaAnual = SELIC,
@@ -120,7 +111,7 @@ namespace FinSight.Calculos.API.Services
                     PatrimonioEstimado = resultadoSelic.PatrimonioFinal,
                     Diferenca = Math.Abs(meta.ValorMeta - resultadoSelic.PatrimonioFinal)
                 },
-                CDI =
+                CDI = new CenarioMetaResponse
                 {
                     Nome = "CDI",
                     TaxaAnual = CDI,
@@ -131,9 +122,47 @@ namespace FinSight.Calculos.API.Services
             };
         }
 
-        public PrazoResponse CalcularPrazo(PrazoRequest prazo)
+        private CenarioPrazo CalcularCenarioPrazo(PrazoRequest prazo, decimal TaxaAnual)
         {
-            return new PrazoResponse{};
+            decimal patrimonio = prazo.ValorInicial;
+            int meses = 0;
+
+            double taxaMensal = Math.Pow(1 + ((double)TaxaAnual/100), 1.0/12) - 1;
+            while(patrimonio < prazo.Meta)
+            {
+                decimal jurosMensal = patrimonio * (decimal)taxaMensal;
+                patrimonio += jurosMensal + prazo.AporteMensal;
+                meses++;
+            }
+            return new CenarioPrazo
+            {
+                MesesNecessarios = meses,
+                PatrimonioFinal = patrimonio
+            };
+        }
+
+        public async Task<PrazoResponse> CalcularPrazo(PrazoRequest prazo)
+        {
+
+            if(prazo.ValorInicial <= 0 && prazo.AporteMensal <= 0)
+                throw new Exception("Informe um valor inicial ou aporte mensal");
+            
+            APIIPCAResponse selicRes = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/Selic");
+            if(selicRes == null) throw new Exception("Resposta da Selic nula");
+            decimal SELIC = (decimal)selicRes.Valor;
+
+            APIIPCAResponse cdiRes = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/CDI");
+            if(cdiRes == null) throw new Exception("Resposta do CDI nulo");
+            decimal CDI = (decimal)cdiRes.Valor;
+
+            var prazoSelic = CalcularCenarioPrazo(prazo, SELIC);
+            var prazoCdi = CalcularCenarioPrazo(prazo, CDI);
+
+            return new PrazoResponse
+            {
+                SELIC = prazoSelic,
+                CDI = prazoCdi
+            };
         }
 
         public ReservaResponse CalcularReserva(ReservaRequest reserva)

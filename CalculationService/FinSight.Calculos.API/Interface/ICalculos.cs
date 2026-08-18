@@ -11,7 +11,7 @@ namespace FinSight.Calculos.API.Interface
         JurosCompostoResponse CalculoJurosComposto(JurosCompostoRequest juros);
         Task<InflationResponse> CalcularInflação(InflationRequest inflacao);
         Task<MetaResponse> CalcularMeta(MetaRequest meta);
-        PrazoResponse CalcularPrazo(PrazoRequest prazo);
+        Task<PrazoResponse> CalcularPrazo(PrazoRequest prazo);
         ReservaResponse CalcularReserva(ReservaRequest reserva);
     }
 }

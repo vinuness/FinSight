@@ -12,7 +12,5 @@ namespace FinSight.Calculos.API.Entities.TimeCalculation
         public decimal ValorInicial { get; set; }
 
         public decimal AporteMensal { get; set; }
-
-        public decimal TaxaAnual { get; set; }
     }
 }
