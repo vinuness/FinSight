@@ -26,7 +26,7 @@ namespace FinSight.Metas.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Meta> FindGoalById(Guid id)
+        public async Task<Meta?> FindGoalById(Guid id)
         {
             return await _con.Metas
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -36,9 +36,9 @@ namespace FinSight.Metas.Infrastructure.Repositories
         {
             var Meta = new Meta{
                 UsuarioId = dto.UsuarioId,
-                Name = dto.Name ?? "Nova Meta",
-                Description = dto.Description,
-                ValorAlcancado = dto.ValorAlcancado,
+                Nome = dto.Nome ?? "Nova Meta",
+                Descricao = dto.Descricao,
+                ValorAtual = dto.ValorAtual,
                 ValorDesejado = dto.ValorDesejado
             }; 
 
@@ -53,16 +53,10 @@ namespace FinSight.Metas.Infrastructure.Repositories
 
             if(meta != null)
             {
-                meta.Description = update.Description;
-                meta.Name = update.Name ?? meta.Name;
-                if(meta.ValorAlcancado != null)
-                {
-                    meta.ValorAlcancado = update.ValorAlcancado;
-                }
-                if(meta.ValorDesejado != null)
-                {
-                    meta.ValorDesejado = update.ValorDesejado;
-                }
+                meta.Descricao = update.Descricao ?? meta.Descricao;
+                meta.Nome = update.Nome ?? meta.Nome;
+                if(update.ValorAtual.HasValue) meta.ValorAtual = update.ValorAtual.Value; 
+                if(update.ValorDesejado.HasValue) meta.ValorDesejado = update.ValorDesejado.Value;
             }
 
             await _con.SaveChangesAsync();

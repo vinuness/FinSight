@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinSight.Metas.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+164a03eb5dcb65ca3635bfa8b582ac5c7402e0be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1c1358edf086c3e49a5b090ea5ebe649e50aa79")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinSight.Metas.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinSight.Metas.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -50,6 +50,16 @@
                 "${workspaceFolder}/MarketDataService/FinSight.Dados.API/FinSight.Dados.API.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-finsight-web",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/FinSight.Web/FinSight.Web.csproj"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }

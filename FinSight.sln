@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -18,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Usuario.Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimulationService", "SimulationService", "{C0984865-15A2-479B-90FC-D5AE3FAC5ABA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Simulacoes.API", "SimulationService\FinSight.Simulacoes.API\FinSight.Simulacoes.API.csproj", "{06190CFD-8E51-4B3F-8723-8923E5394621}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MarketDataService", "MarketDataService", "{47A2DD06-63F9-473C-9849-F9072ACFB4DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Dados.API", "MarketDataService\FinSight.Dados.API\FinSight.Dados.API.csproj", "{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}"
@@ -34,13 +33,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Metas.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Metas.Domain", "GoalServices\FinSight.Metas.Domain\FinSight.Metas.Domain.csproj", "{5082C119-AECC-4ACB-AE17-43306DEAA393}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinSight.Web", "FinSight.Web\FinSight.Web.csproj", "{6BEDDF9B-72E9-45E5-8D46-5A13DA390E13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -63,10 +61,6 @@ Global
 		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9269D062-12AC-456C-BD3D-EF1AACA7AF71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06190CFD-8E51-4B3F-8723-8923E5394621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06190CFD-8E51-4B3F-8723-8923E5394621}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06190CFD-8E51-4B3F-8723-8923E5394621}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06190CFD-8E51-4B3F-8723-8923E5394621}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,6 +81,13 @@ Global
 		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5082C119-AECC-4ACB-AE17-43306DEAA393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BEDDF9B-72E9-45E5-8D46-5A13DA390E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEDDF9B-72E9-45E5-8D46-5A13DA390E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEDDF9B-72E9-45E5-8D46-5A13DA390E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEDDF9B-72E9-45E5-8D46-5A13DA390E13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F48678E2-D5C6-42C3-AD56-E55ED2332DBD} = {CF5D3F24-6308-40FD-BF68-F2C3360DAD3C}
@@ -94,7 +95,6 @@ Global
 		{8A9A1FC5-B0F0-4AD5-8C13-97BF8ACFB787} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
 		{F67C0E51-BBC6-4F3C-9947-B4C1F61A684F} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
 		{9269D062-12AC-456C-BD3D-EF1AACA7AF71} = {95DEE74F-0FBF-44C7-B6D4-9F636544CC2D}
-		{06190CFD-8E51-4B3F-8723-8923E5394621} = {C0984865-15A2-479B-90FC-D5AE3FAC5ABA}
 		{AA4243E2-E8A0-4269-BC7A-6C612B0995DA} = {47A2DD06-63F9-473C-9849-F9072ACFB4DB}
 		{8AEFE5D0-D1F9-433D-AC5F-D60D1A263CD8} = {C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}
 		{018B78A7-5BAB-4D31-977E-1A93B0F2850F} = {C3F14BB6-BA4A-49C1-9C4D-C0C4F06B2E8D}

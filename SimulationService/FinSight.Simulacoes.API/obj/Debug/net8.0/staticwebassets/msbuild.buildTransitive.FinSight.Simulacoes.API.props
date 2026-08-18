@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/FinSight.Simulacoes.API.props" />
-</Project>
