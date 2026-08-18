@@ -35,19 +35,19 @@ namespace FinSight.Dados.API.Controllers
         }
 
         [HttpGet("get/data/Selic")]
-        public async Task<BCBDataModel> GetSelicData()
+        public async Task<BCBDataDTO> GetSelicData()
         {
             return await _data.GetSelicData();
         }
 
         [HttpGet("get/data/CDI")]
-        public async Task<BCBDataModel> GetCDIData()
+        public async Task<BCBDataDTO> GetCDIData()
         {
             return await _data.GetCDIData();
         }
 
         [HttpGet("get/data/IPCA")]
-        public async Task<BCBDataModel> GetIPCAData()
+        public async Task<BCBDataDTO> GetIPCAData()
         {
             return await _data.GetIPCAData();
         }

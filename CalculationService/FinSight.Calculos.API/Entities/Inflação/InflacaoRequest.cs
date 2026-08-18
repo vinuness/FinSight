@@ -7,10 +7,10 @@ namespace FinSight.Calculos.API.Entities.Inflation
 {
     public class InflationRequest
     {
-        public decimal ValorAtual { get; set; }
+        public decimal Valor { get; set; }
 
-        public decimal TaxaInflacaoAnual { get; set; }
+        public decimal IPCA { get; set; }
 
-        public int Anos { get; set; }
+        public int PrazoEmMeses { get; set; }
     }
 }

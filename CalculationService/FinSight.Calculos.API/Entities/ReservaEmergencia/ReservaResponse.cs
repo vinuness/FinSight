@@ -7,6 +7,6 @@ namespace FinSight.Calculos.API.Entities.EmergencyReserve
 {
     public class ReservaResponse
     {
-        public decimal ValorRecomendado { get; set; }
+        public decimal ValorReserva { get; set; }
     }
 }

@@ -9,8 +9,8 @@ namespace FinSight.Calculos.API.Interface
     public interface ICalculos
     {
         JurosCompostoResponse CalculoJurosComposto(JurosCompostoRequest juros);
-        InflationResponse CalcularInflação(InflationRequest inflacao);
-        MetaResponse CalcularMeta(MetaRequest meta);
+        Task<InflationResponse> CalcularInflação(InflationRequest inflacao);
+        Task<MetaResponse> CalcularMeta(MetaRequest meta);
         PrazoResponse CalcularPrazo(PrazoRequest prazo);
         ReservaResponse CalcularReserva(ReservaRequest reserva);
     }

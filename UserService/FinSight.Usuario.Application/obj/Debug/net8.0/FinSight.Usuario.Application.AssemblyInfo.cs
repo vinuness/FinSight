@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinSight.Usuario.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ab23eb21ac32aede9683ee7642a54b001acd583")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26305568880909a45947aca0bb4f144847dfee40")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinSight.Usuario.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinSight.Usuario.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

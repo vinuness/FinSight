@@ -8,12 +8,13 @@ using FinSight.Calculos.API.Interface;
 using FinSight.Calculos.API.Entities.GoalCalculation;
 using FinSight.Calculos.API.Entities.TimeCalculation;
 using FinSight.Calculos.API.Entities.EmergencyReserve;
+using FinSight.Calculos.API.Entities;
 
 namespace FinSight.Calculos.API.Services
 {
     public class Calculos : ICalculos
     {
-
+        private const string url = "http://localhost:5058/api/APIData/";
         private readonly HttpClient _http;
 
         public Calculos(HttpClient http)
@@ -53,24 +54,95 @@ namespace FinSight.Calculos.API.Services
             };
         }
 
-        public InflationResponse CalcularInflação(InflationRequest inflacao)
+        public async Task<InflationResponse> CalcularInflação(InflationRequest inflacao)
         {
-            return new InflationResponse{};
+
+            APIIPCAResponse response = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/IPCA");
+
+            if (response == null) throw new Exception("Não foi possível obter o IPCA");
+
+            inflacao.IPCA = (decimal)response.Valor;
+
+            double anos = inflacao.PrazoEmMeses / 12.0;
+            double taxa = (double)inflacao.IPCA / 100;
+            decimal valorFuturo = inflacao.Valor * (decimal)Math.Pow(1 + taxa, anos);
+
+            return new InflationResponse
+            {
+                ValorAtual = inflacao.Valor,
+                ValorFuturo = valorFuturo,
+                Diferenca = valorFuturo - inflacao.Valor
+            };
         }
 
-        public MetaResponse CalcularMeta(MetaRequest meta)
+        public async Task<MetaResponse> CalcularMeta(MetaRequest meta)
         {
-            throw new NotImplementedException();
+
+            APIIPCAResponse selicRes = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/Selic");
+            decimal SELIC = (decimal)selicRes.Valor;
+
+            APIIPCAResponse cdiRes = await _http.GetFromJsonAsync<APIIPCAResponse>($"{url}get/data/CDI");
+            decimal CDI = (decimal)cdiRes.Valor;
+
+            if (selicRes == null || cdiRes == null)
+            {
+                throw new InvalidOperationException("Não foi possível obter SELIC ou CDI.");
+            }
+
+            var jurosSelic = new JurosCompostoRequest
+            {
+                ValorInicial = meta.ValorInicial,
+                AporteMensal = meta.AporteMensal,
+                PrazoEmMeses = meta.PrazoEmMeses,
+                TaxaAnual = SELIC
+            };
+
+            var resultadoSelic = CalculoJurosComposto(jurosSelic);
+
+            var jurosCdi = new JurosCompostoRequest
+            {
+                ValorInicial = meta.ValorInicial,
+                AporteMensal = meta.AporteMensal,
+                PrazoEmMeses = meta.PrazoEmMeses,
+                TaxaAnual = CDI
+            };
+
+            var resultadoCdi = CalculoJurosComposto(jurosCdi);
+
+            return new MetaResponse
+            {
+                ValorMeta = meta.ValorMeta,
+                SELIC =
+                {
+                    Nome = "SELIC",
+                    TaxaAnual = SELIC,
+                    MetaAtingida = resultadoSelic.PatrimonioFinal >= meta.ValorMeta,
+                    PatrimonioEstimado = resultadoSelic.PatrimonioFinal,
+                    Diferenca = Math.Abs(meta.ValorMeta - resultadoSelic.PatrimonioFinal)
+                },
+                CDI =
+                {
+                    Nome = "CDI",
+                    TaxaAnual = CDI,
+                    MetaAtingida = resultadoCdi.PatrimonioFinal >= meta.ValorMeta,
+                    PatrimonioEstimado = resultadoCdi.PatrimonioFinal,
+                    Diferenca = Math.Abs(meta.ValorMeta - resultadoCdi.PatrimonioFinal)
+                }
+            };
         }
 
         public PrazoResponse CalcularPrazo(PrazoRequest prazo)
         {
-            throw new NotImplementedException();
+            return new PrazoResponse{};
         }
 
         public ReservaResponse CalcularReserva(ReservaRequest reserva)
         {
-            throw new NotImplementedException();
+            decimal valorReserva = reserva.DespesasMensais * reserva.MesesDeReserva;
+            return new ReservaResponse
+            {
+                ValorReserva = valorReserva
+            };
         }
     }
 }

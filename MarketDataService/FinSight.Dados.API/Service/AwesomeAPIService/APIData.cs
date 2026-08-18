@@ -15,8 +15,8 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
 
         public async Task<APIResponseDTO> GetUSDBRL()
         {
-            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>
-                ("https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
+            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>(
+                "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
 
             if (currencies == null)
             {
@@ -35,8 +35,8 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
 
         public async Task<APIResponseDTO> GetEURBRL()
         {
-            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>
-                ("https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
+            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>(
+                "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
 
             if (currencies == null)
             {
@@ -55,8 +55,8 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
 
         public async Task<APIResponseDTO> GetBTCBRL()
         {
-            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>
-                ("https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
+            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>(
+                "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
 
             if (currencies == null)
             {
@@ -73,7 +73,7 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
             };
         }
 
-        public async Task<BCBDataModel> GetSelicData()
+        public async Task<BCBDataDTO> GetSelicData()
         {
             var DataInicial = DateOnly
             .FromDateTime(DateTime.Now)
@@ -84,10 +84,15 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
                 $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados?formato=json&dataInicial={DataInicial}");
 
             var indice = valores.Count()-1;
-            return valores[indice];
+            double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
+
+            return new BCBDataDTO{
+                Data = valores[indice].Data,
+                Valor = valor
+            };
         }
 
-        public async Task<BCBDataModel> GetCDIData()
+        public async Task<BCBDataDTO> GetCDIData()
         {
             var DataInicial = DateOnly
             .FromDateTime(DateTime.Now)
@@ -98,17 +103,27 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
                 $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial={DataInicial}");
 
             var indice = valores.Count() - 1;
-            return valores[indice];
+            double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
+
+            return new BCBDataDTO{
+                Data = valores[indice].Data,
+                Valor = valor
+            };
         }
 
-        public async Task<BCBDataModel> GetIPCAData()
+        public async Task<BCBDataDTO> GetIPCAData()
         {
 
             List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
                 $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json");
 
             var indice = valores.Count() - 1;
-            return valores[indice];
+            double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
+
+            return new BCBDataDTO{
+                Data = valores[indice].Data,
+                Valor = valor
+            };
         }
     }
 }

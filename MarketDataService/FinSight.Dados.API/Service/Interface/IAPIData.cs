@@ -7,8 +7,8 @@ namespace FinSight.Dados.API.Service.Interface
         Task<APIResponseDTO> GetUSDBRL();
         Task<APIResponseDTO> GetEURBRL();
         Task<APIResponseDTO> GetBTCBRL();
-        Task<BCBDataModel> GetSelicData();
-        Task<BCBDataModel> GetCDIData();
-        Task<BCBDataModel> GetIPCAData();
+        Task<BCBDataDTO> GetSelicData();
+        Task<BCBDataDTO> GetCDIData();
+        Task<BCBDataDTO> GetIPCAData();
     }
 }

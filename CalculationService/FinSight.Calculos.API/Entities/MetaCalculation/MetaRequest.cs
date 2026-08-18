@@ -7,7 +7,7 @@ namespace FinSight.Calculos.API.Entities.GoalCalculation
 {
     public class MetaRequest
     {
-        public decimal ValorDaMeta { get; set; }
+        public decimal ValorMeta { get; set; }
 
         public decimal ValorInicial { get; set; }
 
