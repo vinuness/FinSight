@@ -1,7 +1,20 @@
+using FinSight.Web.Interfaces;
+using FinSight.Web.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient<IDataService, DataService>(client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7162/api/APIData/");
+});
+
+builder.Services.AddHttpClient<ICalculoService, CalculoService>(client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7091/api/Calculo/");
+});
 
 var app = builder.Build();
 

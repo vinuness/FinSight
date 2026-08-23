@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FgCr0A7lCwmK9VL+cKEnNGQZ6JClcFAnQTc0rIhLS1DsDiYieh2D1Z1Pgy723jeVLTAdGeWz1WTJpL7mDMhkqg==",
+  "dgSpecHash": "RHYoh82vtQcS/priG0y5ncF/t7EYlDL2ftkstZXE1qJZjSXO2xso3t2eLJi8x5DIP4N2sOivr/J11z+CxUEA1g==",
   "success": true,
   "projectFilePath": "/home/vnjesus/FinSight/MarketDataService/FinSight.Dados.API/FinSight.Dados.API.csproj",
   "expectedPackageFiles": [

@@ -81,7 +81,7 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
             .ToString();
 
             List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
-                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados?formato=json&dataInicial={DataInicial}");
+                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial={DataInicial}");
 
             var indice = valores.Count()-1;
             double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
@@ -100,7 +100,7 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
             .ToString();
 
             List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
-                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.12/dados?formato=json&dataInicial={DataInicial}");
+                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.4392/dados?formato=json&dataInicial={DataInicial}");
 
             var indice = valores.Count() - 1;
             double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
@@ -117,12 +117,19 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
             List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
                 $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json");
 
-            var indice = valores.Count() - 1;
-            double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
+            var mensais = valores.TakeLast(12).ToList();
+            double acumulo = 1;
 
+            foreach(var valor in mensais)
+            {
+                double valorMensal = double.Parse(valor.Valor, CultureInfo.InvariantCulture);
+                acumulo *= 1 + (valorMensal/100);
+            }
+
+            acumulo = (acumulo - 1)*100;
             return new BCBDataDTO{
-                Data = valores[indice].Data,
-                Valor = valor
+                Data = mensais.Last().Data,
+                Valor = Math.Round(acumulo, 2)
             };
         }
     }

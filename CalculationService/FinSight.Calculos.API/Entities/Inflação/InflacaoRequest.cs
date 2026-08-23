@@ -9,5 +9,6 @@ namespace FinSight.Calculos.API.Entities.Inflation
     {
         public decimal Valor { get; set; }
         public int PrazoEmMeses { get; set; }
+        public decimal AporteMensal { get; set; }
     }
 }

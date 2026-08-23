@@ -18,29 +18,29 @@ namespace FinSight.Calculos.API.Controllers
             _calc = calc;
         }
 
-        [HttpGet("calcular/meta")]
-        public async Task<ActionResult<MetaResponse>> CalcularMeta([FromBody] MetaRequest meta)
+        [HttpPost("calcular/meta")]
+        public async Task<ActionResult<MetaResponse>> CalcularMeta(MetaRequest meta)
         {
             MetaResponse response = await _calc.CalcularMeta(meta);
             return Ok(response);
         }
 
-        [HttpGet("calcular/prazo")]
-        public async Task<ActionResult<PrazoResponse>> CalcularPrazo([FromBody] PrazoRequest prazo)
+        [HttpPost("calcular/prazo")]
+        public async Task<ActionResult<PrazoResponse>> CalcularPrazo(PrazoRequest prazo)
         {
             PrazoResponse response = await _calc.CalcularPrazo(prazo);
             return Ok(response);
         }
         
-        [HttpGet("calcular/inflacao")]
-        public async Task<ActionResult<InflationResponse>> CalcularInflação([FromBody] InflationRequest inflacao)
+        [HttpPost("calcular/inflacao")]
+        public async Task<ActionResult<InflationResponse>> CalcularInflação(InflationRequest inflacao)
         {
             InflationResponse response = await _calc.CalcularInflação(inflacao);
             return Ok(response);
         }
 
-        [HttpGet("calcular/reserva")]
-        public async Task<ActionResult<ReservaResponse>> CalcularReservaAsync([FromBody] ReservaRequest reserva)
+        [HttpPost("calcular/reserva")]
+        public async Task<ActionResult<ReservaResponse>> CalcularReserva(ReservaRequest reserva)
         {
             ReservaResponse response = _calc.CalcularReserva(reserva);
             return Ok(response);

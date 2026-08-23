@@ -1,49 +1,82 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FinSight.Web</title>
+    <title>@ViewData["Title"] - FinSight</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FinSight.Web.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FinSight.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <aside>
+        <ul class="m-3 list-unstyled">
+            <li>
+                <a asp-action="Index"
+                   asp-controller="Home">
+                    Home
+                </a>
+            </li>
+            <hr />
+            <li>
+                <a asp-action="Privacy"
+                   asp-controller="Home">
+                    Privacy
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown mt-auto w-100 d-flex justify-content-center mb-3">
+            <a href="#"
+               class="d-flex align-items-center text-decoration-none dropdown-toggle text-white"
+               id="dropdownUser"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30   " fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+
+            </a>
+            <ul class="dropdown-menu shadow"
+                aria-labelledby="dropdownUser">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        Perfil
+                    </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        Sair
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+    <div class="page-content">
+
+        <main role="main">
             @RenderBody()
         </main>
+
+        <footer>
+            <div class="container">
+                &copy; 2026 - FinSight -
+                <a asp-controller="Home"asp-action="Privacy">Privacy</a></div>
+        </footer>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - FinSight.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

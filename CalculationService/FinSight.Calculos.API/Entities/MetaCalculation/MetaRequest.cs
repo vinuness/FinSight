@@ -14,7 +14,5 @@ namespace FinSight.Calculos.API.Entities.GoalCalculation
         public decimal AporteMensal { get; set; }
 
         public int PrazoEmMeses { get; set; }
-
-        public decimal TaxaAnual { get; set; }
     }
 }

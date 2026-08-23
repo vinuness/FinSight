@@ -1,22 +1,80 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
 }
 
 body {
-  margin-bottom: 60px;
+    display: flex;
+}
+
+aside {
+    width: 5%;
+    min-width: 70px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(50, 172, 50);
+    border-radius: 0 10px 10px 0;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+aside:hover {
+    width: 10%;
+}
+
+.page-content {
+    margin-left: 5%;
+    width: 95%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 2%;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover{
+    color: #000000;
+}
+
+.card-data {
+    transition: 0.3s;
+}
+
+.card-data:hover {
+    transform: translateY(-4px);
 }

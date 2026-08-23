@@ -1,8 +1,400 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model FinSight.Web.Models.Calculos.Request.SimulacaoForm
+
+@{
+    ViewData["Title"] = "FinSight";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm border-0 my-4">
+                <div class="card-body p-4">
+                    <h2 class="text-success">
+                        Cuide melhor do seu futuro financeiro
+                    </h2>
+                    <p class="mb-0">
+                        O <strong>FinSight</strong> ajuda você a entender melhor
+                        suas finanças e tomar decisões para o futuro.
+                        Informe os dados abaixo e veja uma simulação completa
+                        considerando sua meta, prazo, inflação e reserva de emergência.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-3 mb-5">
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card shadow-sm border-0 h-100 card-data">
+                <div class="card-body">
+                    <h6 class="text-success">
+                        Dólar
+                    </h6>
+                    <h4>
+                        R$ @ViewBag.USDBRL
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card shadow-sm border-0 h-100 card-data">
+                <div class="card-body">
+                    <h6 class="text-success">
+                        Euro
+                    </h6>
+                    <h4>
+                        R$ @ViewBag.EURBRL
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card shadow-sm border-0 h-100 card-data">
+                <div class="card-body">
+                    <h6 class="text-success">
+                        Bitcoin
+                    </h6>
+                    <h4>
+                        R$ @ViewBag.BTCBRL
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card shadow-sm border-0 h-100 card-data">
+                <div class="card-body">
+                    <h6 class="text-success">
+                        SELIC
+                    </h6>
+                    <h4>
+                        @ViewBag.SELIC%
+                    </h4>
+                    <small class="text-muted">
+                        ao ano
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card shadow-sm border-0 h-100 card-data">
+                <div class="card-body">
+                    <h6 class="text-success">
+                        CDI
+                    </h6>
+                    <h4>
+                        @ViewBag.CDI%
+                    </h4>
+                    <small class="text-muted">
+                        ao ano
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card shadow-sm border-0 h-100 card-data">
+                <div class="card-body">
+                    <h6 class="text-success">
+                        IPCA
+                    </h6>
+                    <h4>
+                        @ViewBag.IPCA%
+                    </h4>
+                    <small class="text-muted">
+                        últimos 12 meses
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h3 class="text-success mb-4">
+                        Simule seu futuro financeiro
+                    </h3>
+                    <form asp-action="CalcularSimulacao" method="post">
+                        <h5 class="mb-3">
+                            Sua meta
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Meta.ValorMeta"
+                                       class="form-label">
+                                    Qual é o valor da sua meta?
+                                </label>
+                                <input asp-for="Meta.ValorMeta"
+                                       type="number"
+                                       step="0.01"
+                                       class="form-control"
+                                       placeholder="Ex: 50000" />
+                                <span asp-validation-for="Meta.ValorMeta"
+                                      class="text-danger">
+                                </span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Meta.ValorInicial"
+                                       class="form-label">
+                                    Quanto você já possui?
+                                </label>
+                                <input asp-for="Meta.ValorInicial"
+                                       type="number"
+                                       step="0.01"
+                                       class="form-control"
+                                       placeholder="Ex: 5000" />
+                                <span asp-validation-for="Meta.ValorInicial"
+                                      class="text-danger">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Meta.AporteMensal"
+                                       class="form-label">
+                                    Quanto pretende investir por mês?
+                                </label>
+                                <input asp-for="Meta.AporteMensal"
+                                       type="number"
+                                       step="0.01"
+                                       class="form-control"
+                                       placeholder="Ex: 500" />
+
+                                <span asp-validation-for="Meta.AporteMensal"
+                                      class="text-danger">
+                                </span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label asp-for="Meta.PrazoEmMeses"
+                                       class="form-label">
+                                    Em quanto tempo deseja atingir a meta?
+                                </label>
+                                <input asp-for="Meta.PrazoEmMeses"
+                                       type="number"
+                                       class="form-control"
+                                       placeholder="Ex: 60" />
+                                <span asp-validation-for="Meta.PrazoEmMeses"
+                                      class="text-danger">
+                                </span>
+                            </div>
+                        </div>
+                        <hr class="my-4" />
+                        <h5 class="mb-3">
+                            Reserva de emergência
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="DespesasMensais"
+                                       class="form-label">
+                                    Quais são suas despesas mensais?
+                                </label>
+                                <input asp-for="DespesasMensais"
+                                       type="number"
+                                       step="0.01"
+                                       class="form-control"
+                                       placeholder="Ex: 3000" />
+
+                                <span asp-validation-for="DespesasMensais"
+                                      class="text-danger">
+                                </span>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label asp-for="MesesReserva"
+                                       class="form-label">
+                                    Quantos meses deseja manter como reserva?
+                                </label>
+                                <input asp-for="MesesReserva"
+                                       type="number"
+                                       class="form-control"
+                                       placeholder="Ex: 6" />
+                                <small class="text-muted">
+                                    Geralmente recomenda-se entre 3 e 12 meses.
+                                </small>
+                                <span asp-validation-for="MesesReserva"
+                                      class="text-danger">
+                                </span>
+                            </div>
+                        </div>
+                        <button type="submit"
+                                class="btn btn-success w-100 py-2">
+                            Simular meu futuro financeiro
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    @if (Model?.Resultado != null)
+    {
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-success mb-4">
+                    Resultado da sua simulação
+                </h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <h4 class="text-success">
+                            Sua Meta
+                        </h4>
+                        <p>
+                            Meta desejada:
+                            <strong>
+                                @Model.Resultado.Meta.ValorMeta.ToString("C", new System.Globalization.CultureInfo("pt-BR"))
+                            </strong>
+                        </p>
+                        <hr />
+                        <h5>
+                            Cenário SELIC
+                        </h5>
+                        <p>
+                            Taxa anual:
+                            <strong>
+                                @Model.Resultado.Meta.SELIC.TaxaAnual%
+                            </strong>
+                        </p>
+                        <p>
+                            Patrimônio estimado:
+                            <strong>
+                                R$ @Model.Resultado.Meta.SELIC.PatrimonioEstimado.ToString("N2")
+                            </strong>
+                        </p>
+                        @if (Model.Resultado.Meta.SELIC.MetaAtingida)
+                        {
+                            <div class="alert alert-success mb-0">
+                                Sua meta pode ser atingida nesse cenário.
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning mb-0">
+                                Sua meta não será atingida dentro do prazo informado.
+                            </div>
+                        }
+                        <hr />
+                        <h5>
+                            Cenário CDI
+                        </h5>
+                        <p>
+                            Taxa anual:
+                            <strong>
+                                @Model.Resultado.Meta.CDI.TaxaAnual%
+                            </strong>
+                        </p>
+                        <p>
+                            Patrimônio estimado:
+                            <strong>
+                                R$ @Model.Resultado.Meta.CDI.PatrimonioEstimado.ToString("N2")
+                            </strong>
+                        </p>
+                        @if (Model.Resultado.Meta.CDI.MetaAtingida)
+                        {
+                            <div class="alert alert-success mb-0">
+                                Sua meta pode ser atingida nesse cenário.
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning mb-0">
+                                Sua meta não será atingida dentro do prazo informado.
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <h4 class="text-success">
+                            Tempo necessário
+                        </h4>
+                        <h5 class="mt-4">
+                            Cenário SELIC
+                        </h5>
+                        <p>
+                            Meses necessários:
+                            <strong>
+                                @Model.Resultado.Prazo.SELIC.MesesNecessarios
+                            </strong>
+                        </p>
+                        <p>
+                            Patrimônio final:
+                            <strong>
+                                R$ @Model.Resultado.Prazo.SELIC.PatrimonioFinal.ToString("N2")
+                            </strong>
+                        </p>
+                        <hr />
+                        <h5>
+                            Cenário CDI
+                        </h5>
+                        <p>
+                            Meses necessários:
+                            <strong>
+                                @Model.Resultado.Prazo.CDI.MesesNecessarios
+                            </strong>
+                        </p>
+                        <p>
+                            Patrimônio final:
+                            <strong>
+                                R$ @Model.Resultado.Prazo.CDI.PatrimonioFinal.ToString("N2")
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <h4 class="text-success">
+                            Impacto da inflação
+                        </h4>
+                        <p>
+                            Valor atual da meta:
+                            <strong>
+                                R$ @Model.Resultado.Inflacao.ValorAtual.ToString("N2")
+                            </strong>
+                        </p>
+                        <p>
+                            Valor necessário no futuro:
+                            <strong>
+                                R$ @Model.Resultado.Inflacao.ValorFuturo.ToString("N2")
+                            </strong>
+                        </p>
+                        <p class="mb-0">
+                            Diferença causada pela inflação:
+                            <strong class="text-danger">
+                                R$ @Model.Resultado.Inflacao.Diferenca.ToString("N2")
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <h4 class="text-success">
+                            Reserva de emergência
+                        </h4>
+                        <p class="mb-0">
+                            Para manter
+                            <strong>
+                                @Model.MesesReserva meses
+                            </strong>
+                            de despesas, sua reserva recomendada seria de:
+                        </p>
+                        <h2 class="text-success mt-3">
+                            R$ @Model.Resultado.Reserva.ValorReserva.ToString("N2")
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+}
