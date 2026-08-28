@@ -22,19 +22,24 @@ namespace FinSight.Usuario.Infrastructure.Repositories
         public async Task Register(RegisterModel register)
         {
 
-            if(register.ConfirmaSenha.Equals(register.Senha)) {
-                var usuario = new UsuarioModel
-                {
-                    Nome = register.Nome,
-                    Email = register.Email,
-                    Senha = HashSenha(register.Senha),
-                    CPF = register.CPF
-                };
+            if (!register.ConfirmaSenha.Equals(register.Senha))
+                throw new Exception("As senhas não coincidem.");
 
-                await _con.Usuarios.AddAsync(usuario);
-                await _con.SaveChangesAsync();
-            }
+            if (!Validacao.ValidaCPF(register.CPF))
+                throw new Exception("CPF inválido.");
+
+            var usuario = new UsuarioModel
+            {
+                Nome = register.Nome,
+                Email = register.Email,
+                Senha = HashSenha(register.Senha),
+                CPF = register.CPF
+            };
+            
+            await _con.Usuarios.AddAsync(usuario);
+            await _con.SaveChangesAsync();
         }
+        
 
         public async Task<UsuarioModel> FindById(Guid id)
         {

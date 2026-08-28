@@ -54,7 +54,7 @@ namespace FinSight.Usuario.API.Controllers
 
         [HttpPut("set/email/{emailAtual}")]
         [Authorize(Roles = "Usuario,Admin")]
-        public async Task<ActionResult> SetEmail(string emailAtual, string emailAtualizado)
+        public async Task<ActionResult> SetEmail(string emailAtual, [FromBody] string emailAtualizado)
         {
             await _service.SetEmail(emailAtual, emailAtualizado);
             return Ok("Email alterado com sucesso");
@@ -62,7 +62,7 @@ namespace FinSight.Usuario.API.Controllers
 
         [HttpPut("set/name/{email}")]
         [Authorize(Roles = "Usuario,Admin")]
-        public async Task<ActionResult> SetName(string email, string name)
+        public async Task<ActionResult> SetName(string email, [FromBody] string name)
         {
             await _service.SetName(email, name);
             return Ok("Nome alterado com sucesso");
@@ -70,9 +70,9 @@ namespace FinSight.Usuario.API.Controllers
 
         [HttpPut("set/pass/{email}")]
         [Authorize(Roles = "Usuario,Admin")]
-        public async Task<ActionResult> SetPassword(string email, string password, string confirmPas)
+        public async Task<ActionResult> SetPassword(string email, [FromBody] UpdatePass update)
         {
-            await _service.SetPassword(email, password, confirmPas);
+            await _service.SetPassword(email, update.Password, update.ConfirmPass);
             return Ok("Senha alterada com sucesso");
         }
 

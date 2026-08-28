@@ -34,6 +34,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/vnjesus/FinSight/FinSight.Web/Views/User/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9DYWRhc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/User/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9QZXJmaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vnjesus/FinSight/FinSight.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

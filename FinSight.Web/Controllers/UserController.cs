@@ -1,0 +1,74 @@
+using System.Security.Claims;
+using FinSight.Web.Interfaces;
+using FinSight.Web.Models.Usuario;
+using Microsoft.AspNetCore.Mvc;
+
+namespace FinSight.Web.Controllers
+{
+    public class UserController : Controller
+    {
+        private readonly IUserService _user;
+
+        public UserController(IUserService user)
+        {
+            _user = user;
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]  
+        public async Task<IActionResult> Login(LoginModel login)
+        {
+            var res = await _user.Login(login);
+
+            if(res == null)
+            {
+                TempData["Error"] = "Dados incorretos ou usuario inexistente";
+                return RedirectToAction("Login");
+            }
+
+            Response.Cookies.Append("jwt", res.Token, new CookieOptions
+            {
+               HttpOnly = true,
+               Secure = true,
+               SameSite = SameSiteMode.Strict,
+               Expires = DateTimeOffset.UtcNow.AddDays(1) 
+            });
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult Cadastrar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Cadastrar(RegisterModel register)
+        {
+            await _user.Cadastrar(register);
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("jwt");
+            return RedirectToAction("Index", "Home");
+        }
+
+        public async Task<IActionResult> Perfil()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            var jwt = Request.Cookies["jwt"];
+
+            if(jwt == null || email == null) return RedirectToAction("Login");
+
+            Usuario usuario = await _user.FindEmail(email);
+            return View(usuario);
+        }
+
+    }
+}
