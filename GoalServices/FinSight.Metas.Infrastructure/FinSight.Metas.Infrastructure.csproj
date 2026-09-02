@@ -11,6 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0"/>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.5-beta1"/>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.12"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FinSight.Metas.Domain\FinSight.Metas.Domain.csproj"/>

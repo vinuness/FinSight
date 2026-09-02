@@ -1,4 +1,5 @@
 @model FinSight.Web.Models.Usuario.Usuario
+
 @{
     ViewData["Title"] = "Perfil";
     var cliente = Model;
@@ -18,18 +19,42 @@
                     <h5 class="mb-3 text-secondary">Informações pessoais</h5>
 
                     <div class="mb-2">
-                        <span class="d-none" id="id"></span>
-                    </div>
-
-                    <div class="mb-2">
-                        <strong>Nome:</strong> @cliente.Nome <span id="nome"></span>
+                        <strong>Nome:</strong> @cliente.Nome
                     </div>
 
                     <div class="mb-4">
-                        <strong>Email:</strong> @cliente.Email <span id="email"></span>
+                        <strong>Email:</strong> @cliente.Email
                     </div>
+
+                    <hr />
+
+                    <h5 class="mb-3 text-secondary">Configurações da conta</h5>
+
+                    <div class="d-grid gap-2">
+
+                        <a asp-controller="User"
+                           asp-action="SetNome"
+                           class="btn btn-outline-success">
+                            Alterar nome
+                        </a>
+
+                        <a asp-controller="User"
+                           asp-action="SetEmail"
+                           class="btn btn-outline-success">
+                            Alterar email
+                        </a>
+
+                        <a asp-controller="User"
+                           asp-action="SetPass"
+                           class="btn btn-outline-success">
+                            Alterar senha
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-
     </div>
-
 </div>

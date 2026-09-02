@@ -10,7 +10,5 @@ namespace FinSight.Usuario.Domain.Entities
         public required string ConfirmaSenha { get; set; }
         [StringLength(14, MinimumLength = 11)]
         public required string CPF { get; set; }
-
-        //bool isValidFormat = Regex.IsMatch(input, pattern);
     }   
 }

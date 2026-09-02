@@ -10,8 +10,5 @@ namespace FinSight.Usuario.Domain.Entities
         public string? Senha { get; set; }
         public string? CPF { get; set; }
         public string Role { get; set; } = "Usuario";
-
-        [JsonIgnore]
-        public List<EnderecoModel> Enderecos = new();
     }
 }

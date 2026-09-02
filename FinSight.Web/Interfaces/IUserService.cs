@@ -14,6 +14,6 @@ namespace FinSight.Web.Interfaces
         public Task<Usuario> FindEmail(string email);
         public Task SetEmail(string emailAtual, string emailAtualizado);
         public Task SetNome(string email, string name);
-        public Task SetPass(string email, string password, string confirmPas);
+        public Task SetPass(string email, UpdatePass pass);
     }
 }

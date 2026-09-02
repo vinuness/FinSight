@@ -22,52 +22,6 @@ namespace FinSight.Usuario.Infrastructure.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("EnderecoModelUsuarioModel", b =>
-                {
-                    b.Property<int>("EnderecosId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("UsuariosId")
-                        .HasColumnType("char(36)");
-
-                    b.HasKey("EnderecosId", "UsuariosId");
-
-                    b.HasIndex("UsuariosId");
-
-                    b.ToTable("EnderecoModelUsuarioModel");
-                });
-
-            modelBuilder.Entity("FinSight.Usuario.Domain.Entities.EnderecoModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Bairro")
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("CEP")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Estado")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Localidade")
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("Numero")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Rua")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Enderecos");
-                });
-
             modelBuilder.Entity("FinSight.Usuario.Domain.Entities.UsuarioModel", b =>
                 {
                     b.Property<Guid>("Id")
@@ -99,21 +53,6 @@ namespace FinSight.Usuario.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("EnderecoModelUsuarioModel", b =>
-                {
-                    b.HasOne("FinSight.Usuario.Domain.Entities.EnderecoModel", null)
-                        .WithMany()
-                        .HasForeignKey("EnderecosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("FinSight.Usuario.Domain.Entities.UsuarioModel", null)
-                        .WithMany()
-                        .HasForeignKey("UsuariosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

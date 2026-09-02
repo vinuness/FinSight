@@ -4,29 +4,101 @@
     ViewData["Title"] = "Cadastrar";
 }
 
-<div class="d-flex align-items-center flex-column">
-    <h1>@ViewData["Title"]</h1>
-    <form method="post" class="d-flex align-items-center flex-column">
-        <div class="mb-3">
-            <label class="form-label">Nome</label>
-            <input type="text" class="form-control" asp-for="Nome">
+<div class="container d-flex justify-content-center align-items-center py-5">
+    <div class="card shadow-sm border-0" style="max-width: 500px; width: 100%;">
+        <div class="card-body p-4 p-md-5">
+
+            <div class="text-center mb-4">
+                <h1 class="h2 fw-bold">Criar conta</h1>
+                <p class="text-body-secondary mb-0">
+                    Cadastre-se para começar a usar o FinSight
+                </p>
+            </div>
+
+            <form method="post">
+
+                <div class="mb-3">
+                    <label asp-for="Nome" class="form-label">
+                        Nome
+                    </label>
+                    <input asp-for="Nome"
+                           class="form-control"
+                           placeholder="Digite seu nome" />
+                    <span asp-validation-for="Nome"
+                          class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">
+                        Email
+                    </label>
+                    <input asp-for="Email"
+                           type="email"
+                           class="form-control"
+                           placeholder="seu@email.com" />
+                    <span asp-validation-for="Email"
+                          class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Senha" class="form-label">
+                        Senha
+                    </label>
+                    <input asp-for="Senha"
+                           type="password"
+                           class="form-control"
+                           placeholder="Digite sua senha" />
+                    <span asp-validation-for="Senha"
+                          class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ConfirmaSenha" class="form-label">
+                        Confirmar senha
+                    </label>
+                    <input asp-for="ConfirmaSenha"
+                           type="password"
+                           class="form-control"
+                           placeholder="Digite a senha novamente" />
+                    <span asp-validation-for="ConfirmaSenha"
+                          class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="CPF" class="form-label">
+                        CPF
+                    </label>
+                    <input asp-for="CPF"
+                           type="text"
+                           class="form-control"
+                           placeholder="000.000.000-00" />
+                    <span asp-validation-for="CPF"
+                          class="text-danger small"></span>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">
+                        Cadastrar
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="text-center mt-4">
+                <span class="text-body-secondary">
+                    Já tem uma conta?
+                </span>
+
+                <a asp-action="Login"
+                   class="text-decoration-none fw-semibold">
+                    Entre
+                </a>
+            </div>
+
         </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" asp-for="Email">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input type="password" class="form-control" asp-for="Senha">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Confirmar Senha</label>
-            <input type="password" class="form-control" asp-for="ConfirmaSenha">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">CPF</label>
-            <input type="text" class="form-control" asp-for="CPF">
-        </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-    </form>
+    </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

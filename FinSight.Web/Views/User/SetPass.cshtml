@@ -1,0 +1,53 @@
+@model FinSight.Web.Models.Usuario.UpdatePass
+
+@{
+    ViewData["Title"] = "Alterar senha";
+    ViewData["HideSide"] = true;
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+
+            <h1 class="mb-4">Alterar senha</h1>
+
+            <form asp-action="SetPass" method="post">
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">
+                        Nova senha
+                    </label>
+
+                    <input type="password"
+                           class="form-control"
+                           id="password"
+                           asp-for="Password"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ConfirmPass" class="form-label">
+                        Confirmar nova senha
+                    </label>
+
+                    <input type="password"
+                           class="form-control"
+                           id="confirmPas"
+                           asp-for="ConfirmPass"
+                           required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Alterar senha
+                </button>
+
+                <a asp-action="Perfil"
+                   class="btn btn-secondary">
+                    Cancelar
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+</div>

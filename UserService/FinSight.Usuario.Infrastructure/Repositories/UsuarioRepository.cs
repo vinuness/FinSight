@@ -46,7 +46,6 @@ namespace FinSight.Usuario.Infrastructure.Repositories
             try
             {
                 var usuario = await _con.Usuarios
-                    .Include(u => u.Enderecos)
                     .FirstOrDefaultAsync(u => u.Id == id);
                 
                 return usuario;
@@ -60,7 +59,6 @@ namespace FinSight.Usuario.Infrastructure.Repositories
         public async Task<UsuarioModel> FindByEmail(string email)
         {
             var usuario = await _con.Usuarios
-                .Include(u => u.Enderecos)
                 .FirstOrDefaultAsync(u => u.Email == email);
 
             return usuario;
@@ -91,22 +89,19 @@ namespace FinSight.Usuario.Infrastructure.Repositories
             var usuario = await _con.Usuarios
                 .FirstOrDefaultAsync(u => u.Email == email);
 
-            if (password == null) throw new Exception("Senha nula");
-            if (confirmPas == null) throw new Exception("Confirmação de senha nula");
-            if (!confirmPas.Equals(password)) throw new Exception("Dados inconsistentes");
+            if(usuario == null) throw new Exception("Usuário não encontrado");
+            if (string.IsNullOrWhiteSpace(password)) throw new Exception("Senha nula");
+            if (string.IsNullOrWhiteSpace(confirmPas)) throw new Exception("Confirmação de senha nula");
+            if (password != confirmPas) throw new Exception("Dados inconsistentes");
 
-            if (confirmPas.Equals(password))
-            {
-                usuario.Senha = password;
-
-                await _con.SaveChangesAsync();
-            }
+            usuario.Senha = HashSenha(password);
+            await _con.SaveChangesAsync();
+            
         }
 
         public async Task DeleteUser(string email)
         {
             var usuario = await _con.Usuarios
-                .Include(u => u.Enderecos)
                 .FirstOrDefaultAsync(u => u.Email == email);
 
             _con.Usuarios.Remove(usuario);

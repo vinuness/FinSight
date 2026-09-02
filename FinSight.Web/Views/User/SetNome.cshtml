@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Alterar nome";
+    ViewData["HideSide"] = true;
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+
+            <h1 class="mb-4">Alterar nome</h1>
+
+            <form asp-action="SetNome" method="post">
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        E-mail
+                    </label>
+
+                    <input type="email"
+                           class="form-control"
+                           id="email"
+                           name="email"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">
+                        Novo nome
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           id="name"
+                           name="name"
+                           required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Alterar nome
+                </button>
+
+                <a asp-action="Perfil"
+                   class="btn btn-secondary">
+                    Cancelar
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+</div>

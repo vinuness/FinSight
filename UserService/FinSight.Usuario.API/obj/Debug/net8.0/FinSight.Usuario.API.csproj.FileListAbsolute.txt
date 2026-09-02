@@ -62,6 +62,7 @@
 /home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
 /home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/Mono.TextTemplating.dll
 /home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/MySqlConnector.dll
+/home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/Newtonsoft.Json.dll
 /home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/QuestPDF.dll
 /home/vnjesus/FinSight/UserService/FinSight.Usuario.API/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll

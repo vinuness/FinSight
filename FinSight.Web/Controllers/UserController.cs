@@ -16,6 +16,7 @@ namespace FinSight.Web.Controllers
 
         public IActionResult Login()
         {
+            ViewData["HideSide"] = true;
             return View();
         }
 
@@ -43,6 +44,7 @@ namespace FinSight.Web.Controllers
 
         public IActionResult Cadastrar()
         {
+            ViewData["HideSide"] = true;
             return View();
         }
 
@@ -70,5 +72,55 @@ namespace FinSight.Web.Controllers
             return View(usuario);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SetEmail(string emailAtual, string emailAtualizado)
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            if(email.Equals(emailAtual)) {
+                await _user.SetEmail(emailAtual, emailAtualizado);
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return RedirectToAction("SetEmail");
+            }
+        }
+
+        public IActionResult SetEmail()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SetNome(string email, string name)
+        {
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
+            if(userEmail.Equals(email)) {
+                await _user.SetNome(email, name);
+                return RedirectToAction("Perfil");
+            }
+            else
+            {
+                return RedirectToAction("SetEmail");
+            }
+        }
+
+        public IActionResult SetNome()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SetPass(UpdatePass pass)
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            await _user.SetPass(email, pass);
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult SetPass()
+        {
+            return View();
+        }
     }
 }

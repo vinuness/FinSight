@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.Configuration.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,14 @@ builder.Services.AddSwaggerGen();
 var key = Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"] ?? "");
 var configPath = builder.Configuration["connection:ConfigPath"] ?? "";
 
+var configs = builder.Configuration
+.SetBasePath(
+    Path.Combine(
+        Directory.GetCurrentDirectory(),
+        "..",
+        "FinSight.Usuario.Infrastructure"))
+    .AddJsonFile("appsettings.json").Build();
+
 builder.Services.AddAuthentication((options) =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -31,19 +40,19 @@ builder.Services.AddAuthentication((options) =>
     {
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(key),
-        ValidateIssuer = false,
-        ValidateAudience = false,
-        ValidateLifetime = true
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+
+        ValidAudience = configs["jwt:audience"],
+        ValidIssuer = configs["jwt:issuer"]
     };
 
     options.IncludeErrorDetails = true;
 });
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
-
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
-builder.Services.AddScoped<IEnderecoService, EnderecoService>();
 
 builder.Services.AddScoped<JWTService>();
 

@@ -1,4 +1,5 @@
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.deps.json
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.runtimeconfig.json
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.dll
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Infrastructure.pdb
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/bin/Debug/net8.0/FinSight.Metas.Domain.dll
@@ -13,4 +14,5 @@
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.dll
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/refint/FinSight.Metas.Infrastructure.dll
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.pdb
+/home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/FinSight.Metas.Infrastructure.genruntimeconfig.cache
 /home/vnjesus/FinSight/GoalServices/FinSight.Metas.Infrastructure/obj/Debug/net8.0/ref/FinSight.Metas.Infrastructure.dll

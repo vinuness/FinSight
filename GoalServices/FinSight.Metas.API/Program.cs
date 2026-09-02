@@ -11,6 +11,9 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<JWTHandler>();
+
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json");
 
@@ -47,7 +50,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IMetaRepository, MetaRepository>();
 builder.Services.AddScoped<IMetaService, MetaService>();
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<IMetaService, MetaService>()
+    .AddHttpMessageHandler<JWTHandler>();
+
+builder.Configuration.SetBasePath(
+    Path.Combine(
+        Directory.GetCurrentDirectory(), 
+        "..",
+        "FinSight.Metas.Infrastructure"))
+    .AddJsonFile("appsettings.json");
+
+Constants.ConfigPath = builder.Configuration["connection:ConfigPath"];
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

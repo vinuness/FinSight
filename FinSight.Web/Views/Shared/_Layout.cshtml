@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/FinSight.Web.styles.css" asp-append-version="true" />
 </head>
 <body>
+
+    @if(ViewData["HideSide"] as bool? != true){
     <aside>
         <ul class="m-3 list-unstyled">
             <li>
@@ -17,13 +19,15 @@
                     Home
                 </a>
             </li>
+            @if(User.Identity != null && User.Identity.IsAuthenticated){
             <hr />
             <li>
-                <a asp-action="Privacy"
-                   asp-controller="Home">
-                    Privacy
+                <a asp-action="Index"
+                   asp-controller="Meta">
+                    Metas
                 </a>
             </li>
+            }
         </ul>
         @if(User.Identity != null && User.Identity.IsAuthenticated){
             <div class="dropdown mt-auto w-100 d-flex justify-content-center mb-3">
@@ -69,9 +73,8 @@
             </div>
         }
     </aside>
-
-
-    <div class="page-content">
+}
+    <div class="page-content @(ViewData["HideSide"] as bool? == true ? "no-sidebar" : "")">
 
         <main role="main">
             @RenderBody()

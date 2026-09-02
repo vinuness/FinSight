@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Alterar e-mail";
+    ViewData["HideSide"] = true;
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+
+            <h1 class="mb-4">Alterar e-mail</h1>
+
+            <form asp-action="SetEmail" method="post">
+
+                <div class="mb-3">
+                    <label for="emailAtual" class="form-label">
+                        E-mail atual
+                    </label>
+
+                    <input type="email"
+                           class="form-control"
+                           id="emailAtual"
+                           name="emailAtual"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="emailAtualizado" class="form-label">
+                        Novo e-mail
+                    </label>
+
+                    <input type="email"
+                           class="form-control"
+                           id="emailAtualizado"
+                           name="emailAtualizado"
+                           required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Alterar e-mail
+                </button>
+
+                <a asp-action="Perfil"
+                   class="btn btn-secondary">
+                    Cancelar
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+</div>

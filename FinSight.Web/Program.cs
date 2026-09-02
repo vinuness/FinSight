@@ -28,6 +28,11 @@ builder.Services.AddHttpClient<IUserService, UserService>(client =>
     client.BaseAddress = new Uri("https://localhost:7058/api/Usuario/");
 }).AddHttpMessageHandler<JWTHandler>();
 
+builder.Services.AddHttpClient<IMetaService, MetaService>(client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7220/api/Meta/");
+}).AddHttpMessageHandler<JWTHandler>();
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {

@@ -26,6 +26,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/vnjesus/FinSight/FinSight.Web/Views/Meta/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0YS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/Meta/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0YS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/Meta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWV0YS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/vnjesus/FinSight/FinSight.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +56,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/vnjesus/FinSight/FinSight.Web/Views/User/Perfil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9QZXJmaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/User/SetEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9TZXRFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/User/SetNome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9TZXROb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/vnjesus/FinSight/FinSight.Web/Views/User/SetPass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9TZXRQYXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/vnjesus/FinSight/FinSight.Web/Views/_ViewImports.cshtml]

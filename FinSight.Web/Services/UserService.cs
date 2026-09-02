@@ -50,14 +50,9 @@ namespace FinSight.Web.Services
             await _http.PutAsJsonAsync($"set/name/{email}", name);
         }
 
-        public async Task SetPass(string email, string password, string confirmPas)
+        public async Task SetPass(string email, UpdatePass pass)
         {
-            var dados = new
-            {
-              password,
-              confirmPas  
-            };
-            await _http.PutAsJsonAsync($"set/pass/{email}", dados);
+            await _http.PutAsJsonAsync($"set/pass/{email}", pass);
         }
     }
 }
