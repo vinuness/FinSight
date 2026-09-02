@@ -54,7 +54,8 @@
                 "UserService",
                 "GoalsService",
                 "CalculationService",
-                "MarketDataService"
+                "MarketDataService",
+                "FinSight.Web"
             ],
             "stopAll": true
         }
