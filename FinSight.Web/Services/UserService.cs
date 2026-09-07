@@ -16,9 +16,16 @@ namespace FinSight.Web.Services
             _http = http;
         }
 
-        public async Task Cadastrar(RegisterModel register)
+        public async Task<string> Cadastrar(RegisterModel register)
         {
-            await _http.PostAsJsonAsync("register/user", register);
+            var res = await _http.PostAsJsonAsync("register/user", register);
+            if(res.IsSuccessStatusCode){
+                return $"Usuario cadastrado com sucesso: {res.StatusCode}";
+            }
+            else
+            {
+                return "Erro ao cadastrar usuario";
+            }
         }
 
         public async Task<Usuario> FindEmail(string email)

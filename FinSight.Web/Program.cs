@@ -15,22 +15,22 @@ builder.Services.AddTransient<JWTHandler>();
 
 builder.Services.AddHttpClient<IDataService, DataService>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7162/api/APIData/");
+    client.BaseAddress = new Uri("http://marketdata-api:8080/api/APIData/");
 }).AddHttpMessageHandler<JWTHandler>();
 
 builder.Services.AddHttpClient<ICalculoService, CalculoService>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7091/api/Calculo/");
+    client.BaseAddress = new Uri("http://calculation-api:8080/api/Calculo/");
 }).AddHttpMessageHandler<JWTHandler>();
 
 builder.Services.AddHttpClient<IUserService, UserService>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7058/api/Usuario/");
+    client.BaseAddress = new Uri("http://usuario-api:8080/api/Usuario/");
 }).AddHttpMessageHandler<JWTHandler>();
 
 builder.Services.AddHttpClient<IMetaService, MetaService>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7220/api/Meta/");
+    client.BaseAddress = new Uri("http://goal-api:8080/api/Meta/");
 }).AddHttpMessageHandler<JWTHandler>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

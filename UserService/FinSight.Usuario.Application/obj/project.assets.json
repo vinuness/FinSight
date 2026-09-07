@@ -1396,7 +1396,7 @@
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "8.0.0",
           "Microsoft.Extensions.Configuration.Json": "8.0.0",
-          "Pomelo.EntityFrameworkCore.MySql": "8.0.0",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.3",
           "QuestPDF": "2026.7.1",
           "Swashbuckle.AspNetCore.Swagger": "8.0.0",
           "Swashbuckle.AspNetCore.SwaggerGen": "8.0.0",

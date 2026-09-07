@@ -49,9 +49,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IMetaRepository, MetaRepository>();
-builder.Services.AddScoped<IMetaService, MetaService>();
-builder.Services.AddHttpClient<IMetaService, MetaService>()
-    .AddHttpMessageHandler<JWTHandler>();
+builder.Services.AddHttpClient<IMetaService, MetaService>(client =>
+{
+    client.BaseAddress = new Uri("http://usuario-api:8080/api/Usuario/");
+}).AddHttpMessageHandler<JWTHandler>();
 
 builder.Configuration.SetBasePath(
     Path.Combine(
@@ -68,6 +69,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 var app = builder.Build();
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

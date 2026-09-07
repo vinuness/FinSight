@@ -9,7 +9,6 @@ namespace FinSight.Metas.Application.Services
     {
         private readonly IMetaRepository _repo;
         private readonly HttpClient _http;
-        private const string clientUrl = "https://localhost:7058/api/Usuario";
 
         public MetaService(HttpClient client, IMetaRepository repo)
         {
@@ -17,29 +16,22 @@ namespace FinSight.Metas.Application.Services
             _http = client;
         }
 
-public async Task<List<Meta>> FindAllGoals(Guid id)
-{
-    var usuario = await _http.GetAsync($"{clientUrl}/find/user/{id}");
+        public async Task<List<Meta>> FindAllGoals(Guid id)
+        {
+            var usuario = await _http.GetAsync($"find/user/{id}");
+            var response = await usuario.Content.ReadAsStringAsync();
 
-    Console.WriteLine("========== VALIDAÇÃO USUÁRIO ==========");
-    Console.WriteLine($"URL: {clientUrl}/find/user/{id}");
-    Console.WriteLine($"Status: {(int)usuario.StatusCode} - {usuario.StatusCode}");
+            if (!usuario.IsSuccessStatusCode)
+            {
+                if (usuario.StatusCode == HttpStatusCode.NotFound)
+                    throw new Exception("Usuário não encontrado");
 
-    var response = await usuario.Content.ReadAsStringAsync();
-    Console.WriteLine($"Resposta: {response}");
-    Console.WriteLine("=======================================");
+                throw new HttpRequestException(
+                    $"Não foi possível validar o usuario. Status: {usuario.StatusCode}");
+            }
 
-    if (!usuario.IsSuccessStatusCode)
-    {
-        if (usuario.StatusCode == HttpStatusCode.NotFound)
-            throw new Exception("Usuário não encontrado");
-
-        throw new HttpRequestException(
-            $"Não foi possível validar o usuario. Status: {usuario.StatusCode}");
-    }
-
-    return await _repo.FindAllGoals(id);
-}
+            return await _repo.FindAllGoals(id);
+        }
 
         public async Task<Meta> FindGoalById(Guid id)
         {

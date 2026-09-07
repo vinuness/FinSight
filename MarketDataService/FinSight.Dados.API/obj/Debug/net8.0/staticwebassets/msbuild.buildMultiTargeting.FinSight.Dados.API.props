@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/FinSight.Dados.API.props" />
-</Project>

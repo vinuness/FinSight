@@ -1,0 +1,126 @@
+name: FinSight CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+
+  usuario-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore UserService/FinSight.UserService.sln
+
+      - name: Build
+        run: dotnet build UserService/FinSight.UserService.sln --configuration Release --no-restore
+
+      - name: Docker Build
+        run: docker build -t finsight-usuario ./UserService
+
+
+  goal-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore GoalServices/FinSight.GoalService.sln
+
+      - name: Build
+        run: dotnet build GoalServices/FinSight.GoalService.sln --configuration Release --no-restore
+
+      - name: Docker Build
+        run: docker build -t finsight-goals ./GoalServices
+
+
+  calculation-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore CalculationService/FinSight.CalculationService.sln
+
+      - name: Build
+        run: dotnet build CalculationService/FinSight.CalculationService.sln --configuration Release --no-restore
+
+      - name: Docker Build
+        run: docker build -t finsight-calculation ./CalculationService
+
+
+  market-data-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore MarketDataService/FinSight.Dados.API/FinSight.Dados.API.csproj
+
+      - name: Build
+        run: dotnet build MarketDataService/FinSight.Dados.API/FinSight.Dados.API.csproj --configuration Release --no-restore
+
+      - name: Docker Build
+        run: docker build -t finsight-marketdata ./MarketDataService
+
+
+  web-service:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore FinSight.Web/FinSight.Web.csproj
+
+      - name: Build
+        run: dotnet build FinSight.Web/FinSight.Web.csproj --configuration Release --no-restore
+
+      - name: Docker Build
+        run: docker build -t finsight-web ./FinSight.Web

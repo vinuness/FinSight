@@ -98,7 +98,12 @@
         </div>
     </div>
 </div>
-
+@if (TempData["Mensagem"] != null)
+{
+    <script>
+        alert('@TempData["Mensagem"]');
+    </script>
+}
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

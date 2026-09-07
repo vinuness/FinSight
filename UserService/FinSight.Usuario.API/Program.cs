@@ -19,16 +19,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Configuration
+    .SetBasePath(
+        Path.Combine(
+            Directory.GetCurrentDirectory(),
+            "..",
+            "FinSight.Usuario.Infrastructure"))
+        .AddJsonFile("appsettings.json").Build();
+
 var key = Encoding.UTF8.GetBytes(builder.Configuration["jwt:key"] ?? "");
 var configPath = builder.Configuration["connection:ConfigPath"] ?? "";
-
-var configs = builder.Configuration
-.SetBasePath(
-    Path.Combine(
-        Directory.GetCurrentDirectory(),
-        "..",
-        "FinSight.Usuario.Infrastructure"))
-    .AddJsonFile("appsettings.json").Build();
 
 builder.Services.AddAuthentication((options) =>
 {
@@ -44,8 +44,8 @@ builder.Services.AddAuthentication((options) =>
         ValidateAudience = true,
         ValidateLifetime = true,
 
-        ValidAudience = configs["jwt:audience"],
-        ValidIssuer = configs["jwt:issuer"]
+        ValidAudience = builder.Configuration["jwt:audience"],
+        ValidIssuer = builder.Configuration["jwt:issuer"]
     };
 
     options.IncludeErrorDetails = true;
@@ -67,6 +67,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddCors();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
 
 app.UseCors((options) =>
 {

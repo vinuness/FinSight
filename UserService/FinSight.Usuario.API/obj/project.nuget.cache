@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2KvZKQ6BZwXtm7vqNM8jya7TAPbju7BRTvU5B8Ox714dPuvGfMKg1TvHTzuW1pxrHEsQakd5v99IIdg8Jay6WA==",
+  "dgSpecHash": "avATcom4KZAuGi9cVoIIqE5qO6M8raHhIjMyKtqQS/Cvu0vybhVQXE2fp0NG0aRXMkDjsZNVY5glOd1N5VLDxA==",
   "success": true,
   "projectFilePath": "/home/vnjesus/FinSight/UserService/FinSight.Usuario.API/FinSight.Usuario.API.csproj",
   "expectedPackageFiles": [
@@ -61,7 +61,7 @@
     "/home/vnjesus/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/home/vnjesus/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
     "/home/vnjesus/.nuget/packages/newtonsoft.json/8.0.1/newtonsoft.json.8.0.1.nupkg.sha512",
-    "/home/vnjesus/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.0/pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
+    "/home/vnjesus/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.3/pomelo.entityframeworkcore.mysql.8.0.3.nupkg.sha512",
     "/home/vnjesus/.nuget/packages/questpdf/2026.7.1/questpdf.2026.7.1.nupkg.sha512",
     "/home/vnjesus/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/home/vnjesus/.nuget/packages/swashbuckle.aspnetcore.swagger/8.0.0/swashbuckle.aspnetcore.swagger.8.0.0.nupkg.sha512",

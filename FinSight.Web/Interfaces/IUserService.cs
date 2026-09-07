@@ -8,7 +8,7 @@ namespace FinSight.Web.Interfaces
 {
     public interface IUserService
     {
-        public Task Cadastrar(RegisterModel register);
+        public Task<string> Cadastrar(RegisterModel register);
         public Task<LoginResponse> Login(LoginModel login);
         public Task<Usuario> FindId(Guid id);
         public Task<Usuario> FindEmail(string email);

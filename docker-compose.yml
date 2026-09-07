@@ -1,0 +1,136 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: finsight-mysql
+    restart: unless-stopped
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: finsight
+      MYSQL_USER: finsight
+      MYSQL_PASSWORD: finsight
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "finsight", "-pfinsight"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+
+  usuario-api:
+    build:
+      context: ./UserService
+      dockerfile: Dockerfile
+
+    container_name: finsight-usuario
+    restart: unless-stopped
+
+    ports:
+      - "7058:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=mysql;Port=3306;Database=Finsight;User=finsight;Password=finsight;"
+
+    volumes:
+      - /home/vnjesus/Conexoes/FINSIGHT.config:/home/vnjesus/Conexoes/FINSIGHT.config:ro
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+
+  goal-api:
+    build:
+      context: ./GoalServices
+      dockerfile: Dockerfile
+
+    container_name: finsight-goals
+    restart: unless-stopped
+
+    ports:
+      - "7220:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=mysql;Port=3306;Database=Finsight;User=finsight;Password=finsight;"
+
+    volumes:
+      - /home/vnjesus/Conexoes/FINSIGHT.config:/home/vnjesus/Conexoes/FINSIGHT.config:ro
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+
+  calculation-api:
+    build:
+      context: ./CalculationService
+      dockerfile: Dockerfile
+
+    container_name: finsight-calculation
+    restart: unless-stopped
+
+    ports:
+      - "7091:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+  marketdata-api:
+    build:
+      context: ./MarketDataService
+      dockerfile: Dockerfile
+
+    container_name: finsight-marketdata
+    restart: unless-stopped
+
+    ports:
+      - "7162:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+  web:
+    build:
+      context: ./FinSight.Web
+      dockerfile: Dockerfile
+
+    container_name: finsight-web
+    restart: unless-stopped
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+    depends_on:
+      - usuario-api
+      - goal-api
+      - calculation-api
+      - marketdata-api
+
+
+  nginx:
+    image: nginx:alpine
+    container_name: finsight-nginx
+    restart: unless-stopped
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+
+    depends_on:
+      - web
+
+
+volumes:
+  mysql_data:

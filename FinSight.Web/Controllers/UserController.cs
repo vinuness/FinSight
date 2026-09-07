@@ -27,14 +27,16 @@ namespace FinSight.Web.Controllers
 
             if(res == null)
             {
-                TempData["Error"] = "Dados incorretos ou usuario inexistente";
+                TempData["Mensagem"] = "Dados incorretos ou usuario inexistente";
                 return RedirectToAction("Login");
             }
+
+            TempData["Mensagem"] = "Login Feito com sucesso";
 
             Response.Cookies.Append("jwt", res.Token, new CookieOptions
             {
                HttpOnly = true,
-               Secure = true,
+               Secure = false,
                SameSite = SameSiteMode.Strict,
                Expires = DateTimeOffset.UtcNow.AddDays(1) 
             });
@@ -51,7 +53,9 @@ namespace FinSight.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Cadastrar(RegisterModel register)
         {
-            await _user.Cadastrar(register);
+            var msg = await _user.Cadastrar(register);
+            Console.WriteLine(msg);
+            TempData["Mensagem"] = msg;
             return RedirectToAction("Login");
         }
 
