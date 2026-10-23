@@ -78,7 +78,7 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
             var DataInicial = DateOnly
             .FromDateTime(DateTime.Now)
             .AddMonths(-1)
-            .ToString();
+            .ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
 
             List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
                 $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial={DataInicial}");
@@ -97,7 +97,7 @@ namespace FinSight.Dados.API.Service.AwesomeAPIService
             var DataInicial = DateOnly
             .FromDateTime(DateTime.Now)
             .AddMonths(-1)
-            .ToString();
+            .ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
 
             List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
                 $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.4392/dados?formato=json&dataInicial={DataInicial}");

@@ -9,7 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: finsight
       MYSQL_USER: finsight
-      MYSQL_PASSWORD: finsight
+      MYSQL_PASSWORD: finsight  
 
     volumes:
       - mysql_data:/var/lib/mysql
