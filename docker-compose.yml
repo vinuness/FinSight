@@ -1,0 +1,95 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: finsight-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: finsight
+      MYSQL_USER: finsight
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u$$MYSQL_USER -p$$MYSQL_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  usuario-api:
+    build:
+      context: ./UserService
+      dockerfile: Dockerfile
+    container_name: finsight-usuario
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      jwt__key: ${JWT_KEY:?defina JWT_KEY no arquivo .env}
+    volumes:
+      - ./config/FINSIGHT.config:/home/vnjesus/Conexoes/FINSIGHT.config:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  goal-api:
+    build:
+      context: ./GoalServices
+      dockerfile: Dockerfile
+    container_name: finsight-goals
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      jwt__key: ${JWT_KEY:?defina JWT_KEY no arquivo .env}
+    volumes:
+      - ./config/FINSIGHT.config:/home/vnjesus/Conexoes/FINSIGHT.config:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  calculation-api:
+    build:
+      context: ./CalculationService
+      dockerfile: Dockerfile
+    container_name: finsight-calculation
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+
+  marketdata-api:
+    build:
+      context: ./MarketDataService
+      dockerfile: Dockerfile
+    container_name: finsight-marketdata
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+
+  web:
+    build:
+      context: ./FinSight.Web
+      dockerfile: Dockerfile
+    container_name: finsight-web
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    depends_on:
+      - usuario-api
+      - goal-api
+      - calculation-api
+      - marketdata-api
+
+  nginx:
+    image: nginx:alpine
+    container_name: finsight-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web
+
+volumes:
+  mysql_data:

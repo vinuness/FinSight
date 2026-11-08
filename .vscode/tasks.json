@@ -1,0 +1,134 @@
+{
+    "version": "2.0.0",
+
+    "tasks": [
+        {
+            "label": "build-user",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/UserService/FinSight.Usuario.API/FinSight.Usuario.API.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-goals",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/GoalServices/FinSight.Metas.API/FinSight.Metas.API.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-calculation",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/CalculationService/FinSight.Calculos.API/FinSight.Calculos.API.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-marketdata",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/MarketDataService/FinSight.Dados.API/FinSight.Dados.API.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-finsight-web",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/FinSight.Web/FinSight.Web.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+
+        {
+            "label": "watch-user",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/UserService/FinSight.Usuario.API"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "watch-goals",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/GoalServices/FinSight.Metas.API"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "watch-calculation",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/CalculationService/FinSight.Calculos.API"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "watch-marketdata",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/MarketDataService/FinSight.Dados.API"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "watch-finsight-web",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/FinSight.Web"
+            },
+            "problemMatcher": []
+        },
+
+        {
+            "label": "FinSight - Watch All",
+            "dependsOn": [
+                "watch-user",
+                "watch-goals",
+                "watch-calculation",
+                "watch-marketdata",
+                "watch-finsight-web"
+            ],
+            "dependsOrder": "parallel"
+        }
+    ]
+}

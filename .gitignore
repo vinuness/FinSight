@@ -1,0 +1,6 @@
+.env
+config/
+obj/
+.vs/
+bin/
+*.zip

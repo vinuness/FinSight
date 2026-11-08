@@ -1,0 +1,46 @@
+@model FinSight.Web.Models.Usuario.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="container d-flex justify-content-center align-items-center py-5">
+    <div class="card shadow-sm border-0" style="max-width: 500px; width: 100%;">
+        <div class="card-body p-4 p-md-5">
+
+            <div class="text-center mb-4">
+                <h1 class="h2 fw-bold">@ViewData["Title"]</h1>
+                <p class="text-body-secondary mb-0">
+                    Entre para usar o FinSight
+                </p>
+            </div>
+
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input type="email" placeholder="example@@gmail.com" class="form-control" asp-for="Email">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Senha</label>
+                    <input type="password" placeholder="*****" class="form-control" asp-for="Password">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+            <div class="text-center mt-4">
+                <span class="text-body-secondary">Ainda não tem conta? </span>
+                <a style="text-decoration: none;" asp-action="Cadastrar">
+                    Registre-se
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+@if (TempData["Mensagem"] != null)
+{
+    <script>
+        alert('@TempData["Mensagem"]');
+    </script>
+    TempData["Mensagem"] = null;
+}

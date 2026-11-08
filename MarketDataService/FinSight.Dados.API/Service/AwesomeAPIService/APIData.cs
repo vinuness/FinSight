@@ -1,0 +1,136 @@
+﻿using FinSight.Dados.API.DTOs;
+using FinSight.Dados.API.Service.Interface;
+using System.Globalization;
+
+namespace FinSight.Dados.API.Service.AwesomeAPIService
+{
+    public class APIData : IAPIData
+    {
+        private readonly HttpClient _client;
+
+        public APIData(HttpClient client)
+        {
+            _client = client;
+        }
+
+        public async Task<APIResponseDTO> GetUSDBRL()
+        {
+            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>(
+                "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
+
+            if (currencies == null)
+            {
+                return null;
+            }
+
+            var dolar = currencies["USDBRL"];
+            double valor = Convert.ToDouble(dolar.Bid, CultureInfo.InvariantCulture);
+
+            return new APIResponseDTO
+            {
+                Nome = "USDBRL",
+                Valor = Math.Round(valor, 2)
+            };
+        }
+
+        public async Task<APIResponseDTO> GetEURBRL()
+        {
+            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>(
+                "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
+
+            if (currencies == null)
+            {
+                return null;
+            }
+
+            var dolar = currencies["EURBRL"];
+            double valor = Convert.ToDouble(dolar.Bid, CultureInfo.InvariantCulture);
+
+            return new APIResponseDTO
+            {
+                Nome = "EURBRL",
+                Valor = Math.Round(valor, 2)
+            };
+        }
+
+        public async Task<APIResponseDTO> GetBTCBRL()
+        {
+            var currencies = await _client.GetFromJsonAsync<Dictionary<string, AwesomeAPICurrency>>(
+                "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL");
+
+            if (currencies == null)
+            {
+                return null;
+            }
+
+            var dolar = currencies["BTCBRL"];
+            double valor = Convert.ToDouble(dolar.Bid, CultureInfo.InvariantCulture);
+
+            return new APIResponseDTO
+            {
+                Nome = "BTCBRL",
+                Valor = Math.Round(valor, 2)
+            };
+        }
+
+        public async Task<BCBDataDTO> GetSelicData()
+        {
+            var DataInicial = DateOnly
+            .FromDateTime(DateTime.Now)
+            .AddMonths(-1)
+            .ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
+                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados?formato=json&dataInicial={DataInicial}");
+
+            var indice = valores.Count()-1;
+            double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
+
+            return new BCBDataDTO{
+                Data = valores[indice].Data,
+                Valor = valor
+            };
+        }
+
+        public async Task<BCBDataDTO> GetCDIData()
+        {
+            var DataInicial = DateOnly
+            .FromDateTime(DateTime.Now)
+            .AddMonths(-1)
+            .ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
+                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.4392/dados?formato=json&dataInicial={DataInicial}");
+
+            var indice = valores.Count() - 1;
+            double valor = double.Parse((valores[indice].Valor), CultureInfo.InvariantCulture);
+
+            return new BCBDataDTO{
+                Data = valores[indice].Data,
+                Valor = valor
+            };
+        }
+
+        public async Task<BCBDataDTO> GetIPCAData()
+        {
+
+            List<BCBDataModel> valores = await _client.GetFromJsonAsync<List<BCBDataModel>>(
+                $"https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json");
+
+            var mensais = valores.TakeLast(12).ToList();
+            double acumulo = 1;
+
+            foreach(var valor in mensais)
+            {
+                double valorMensal = double.Parse(valor.Valor, CultureInfo.InvariantCulture);
+                acumulo *= 1 + (valorMensal/100);
+            }
+
+            acumulo = (acumulo - 1)*100;
+            return new BCBDataDTO{
+                Data = mensais.Last().Data,
+                Valor = Math.Round(acumulo, 2)
+            };
+        }
+    }
+}

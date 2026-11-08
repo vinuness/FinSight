@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../FinSight.Usuario.Application/FinSight.Usuario.Application.csproj" Id="68596fe2-cb4b-4566-89c5-401656906547" />
+  <Project Path="../FinSight.Usuario.Domain/FinSight.Usuario.Domain.csproj" Id="b4ba7975-c52c-4984-9d07-238e4e271abc" />
+  <Project Path="../FinSight.Usuario.Infrastructure/FinSight.Usuario.Infrastructure.csproj" Id="d434083b-ce2c-41c1-9838-48b907fc16df" />
+  <Project Path="FinSight.Usuario.API.csproj" />
+</Solution>

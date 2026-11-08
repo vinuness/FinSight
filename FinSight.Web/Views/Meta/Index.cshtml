@@ -1,0 +1,109 @@
+@model List<FinSight.Web.Models.Metas.Meta>
+
+@{
+    ViewData["Title"] = "Minhas Metas";
+}
+
+<div class="goals-container">
+
+    <div class="goals-header">
+        <div>
+            <h1>Minhas metas</h1>
+            <p>Acompanhe seu progresso financeiro</p>
+        </div>
+
+        <a asp-controller="Meta"
+           asp-action="Create"
+           class="btn-new-goal">
+            + Nova meta
+        </a>
+    </div>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="empty-goals">
+            <h2>Nenhuma meta cadastrada</h2>
+            <p>Comece criando sua primeira meta financeira.</p>
+
+            <a asp-controller="Meta"
+               asp-action="Create"
+               class="btn-new-goal">
+                Criar minha primeira meta
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="goals-grid">
+
+            @foreach (var meta in Model)
+            {
+                var percentual = meta.ValorDesejado > 0
+                    ? (meta.ValorAtual / meta.ValorDesejado) * 100
+                    : 0;
+
+                percentual = Math.Min(percentual, 100);
+
+                <div class="goal-card">
+
+                    <div class="goal-card-header">
+                        <h2>@meta.Nome</h2>
+
+                        <div class="goal-actions">
+                            <a asp-action="Edit"
+                               asp-route-id="@meta.Id"
+                               title="Editar">
+                                ✎
+                            </a>
+
+                            <a asp-action="Delete"
+                               asp-route-id="@meta.Id"
+                               title="Excluir">
+                                🗑
+                            </a>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrWhiteSpace(meta.Descricao))
+                    {
+                        <p class="goal-description">
+                            @meta.Descricao
+                        </p>
+                    }
+
+                    <div class="goal-values">
+
+                        <div>
+                            <span>Valor atual</span>
+                            <strong>
+                                @meta.ValorAtual.ToString("C2")
+                            </strong>
+                        </div>
+
+                        <div class="goal-target">
+                            <span>Objetivo</span>
+                            <strong>
+                                @meta.ValorDesejado.ToString("C2")
+                            </strong>
+                        </div>
+
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Progresso</span>
+                        <strong>@percentual.ToString("0.0")%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress"
+                             style="width: @percentual.ToString(System.Globalization.CultureInfo.InvariantCulture)%">
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>

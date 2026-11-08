@@ -1,0 +1,6 @@
+@FinSight.Dados.API_HostAddress = http://localhost:5058
+
+GET {{FinSight.Dados.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
